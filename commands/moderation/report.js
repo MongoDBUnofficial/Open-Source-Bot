@@ -8,18 +8,18 @@ module.exports = {
     usage: "<mention | id>",
     run: async ( client,message, args) => {
 
-       // if (message.deletable) message.delete();
+        if (message.deletable) message.delete();
     
 let rMember = message.mentions.members.first() || message.guild.members.get(ards[0]);
 
 if (!rMember)
-return message.reply("Oops! I couldn't find that person!").then(m => m.delete(5000));
+return message.reply("Oops! I couldn't find that person!").delete({ timeout: 3000})
 
 if (rMember.hasPermission("BAN_MEMBERS") || rMember.user.bot)
-return message.reply ("You can't report that member!").then(m => m.delete(5000));
+return message.reply ("You can't report that member!").delete({ timeout: 3000})
 
 if (!args[1])
-return message.channel.send("Please provide a reason for the report!").then(m => m.delete(5000));
+return message.channel.send("Please provide a reason for the report!").delete({ timeout: 3000})
 
 const channel = message.guild.channels.find(channel => channel.name === "reports");
 
