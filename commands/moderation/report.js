@@ -8,7 +8,7 @@ module.exports = {
     usage: "<mention | id>",
     run: async ( client,message, args) => {
 
-        if (message.deletable) message.delete();
+       // if (message.deletable) message.delete();
     
 let rMember = message.mentions.members.first() || message.guild.members.get(ards[0]);
 
