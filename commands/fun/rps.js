@@ -22,7 +22,7 @@ const reacted = await promptMessage(m, message.author, 30, chooseArr)
 const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
 
 const result = await getResult(reacted, botChoice);
-await m.clearReactions();
+await m.messageReactionRemoveAll();
 
 embed
 .setDescription("")
