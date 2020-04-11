@@ -58,7 +58,7 @@ module.exports = {
 
         
 //cant kick a member with kick permissions
-if (toKick.hasPermission("KICK_MEMBERS")) {
+if (toBan.hasPermission("KICK_MEMBERS")) {
     return message.reply("❌ You cannot ban a member that has kick permissions!")
      .then(msg => msg.delete({ timeout: 3000}))
  }
