@@ -14,7 +14,7 @@ module.exports = {
         const roleColor = message.guild.me.displayHexColor;
 
         message.channel.send(new MessageEmbed()
-        .setFooter(message.author.name)
+        .setFooter(message.author.tag)
         .setColor(roleColor)
         .setDescription(args.join(" ")));
         
