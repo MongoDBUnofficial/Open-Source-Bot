@@ -10,7 +10,7 @@ module.exports = {
 
         if (message.deletable) message.delete();
     
-let rMember = message.mentions.members.first() || message.guild.members.get(args[0]);
+let rMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
 if (!rMember)
 return message.reply("Oops! I couldn't find that person!").then(msg => msg.delete({ timeout: 3000}))
