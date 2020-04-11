@@ -16,7 +16,7 @@ if (!rMember)
 return message.reply("Oops! I couldn't find that person!").then(m => m.delete(5000));
 
 if (rMember.hasPermission("BAN_MEMBERS") || rMember.user.bot)
-return message.reply ("You can't report that member!")
+return message.reply ("You can't report that member!").then(m.delete(5000));
 
 if (!args[1])
 return message.channel.send("Please provide a reason for the report!").then(m.delete(5000));
