@@ -11,7 +11,7 @@ module.exports = {
 
     .setFooter(message.author.tag)
     .setThumbnail(message.author.AvatarURL)
-    .setColor(message.author.displayHexColor === "#000000" ? "#ffffff" : message.author.displayHexColor)
+    .setColor(roleColor)
     .addField("**Reccomended bin:**", "https://sourceb.in/")
     .setTimestamp()
 
