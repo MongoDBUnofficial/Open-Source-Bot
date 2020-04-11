@@ -1,5 +1,6 @@
 const { getMember, formatDate } = require("../../functions.js")
 const { MessageEmbed } = require("discord.js");
+const moment = require("moment");
 
 module.exports = {
     name: "uptime",
@@ -22,8 +23,9 @@ module.exports = {
         let hours = minutes / 60;
         minutes = (hours % 1) * 60;
         hours -= (minutes / 60);
-        let time = ""+hours+":"+minutes+":"+seconds+"."+ms;
-        
+        let time = minutes+":"+seconds+"."+ms;
+        time = hours += ":" + moment(time, "mm:ss.SSS").format("mm:ss.SSS");
+
         const embed = new MessageEmbed()
 
     .setColor(roleColor)
