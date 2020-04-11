@@ -11,8 +11,7 @@ module.exports = {
 
         if (message.deletable) message.delete(); 
     
-getAll(client, message)
-.then(msg => msg.delete({ timeout: 3000}))
+
 
     }
 }
@@ -33,4 +32,26 @@ const info = client.categories
 
 return message.channel.send(embed.setDescription(info))
 
+}
+
+function getCMD(client, message, input) {
+    const embed = new MessageEmbed()
+
+    const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
+    
+    let info = `No information found for that command! **${input.toLowerCase()}**`;
+
+    if (!cmd) {
+        return message.channel.send(embed.setColor("RED").setDescription("Info"));
+    }
+
+    if (cmd.name) info = `**Command Name**: ${cmd.name}`;
+    if (cmd.aliases) info += `\n**Aliases**: ${cmd.aliases.map(a => `\`${a}\``).join(", ")}`;
+    if (cmd.description) info += `\n**Description**: ${cmd.description}`;
+    if (cmd.usage) {
+        info += `\n**Usage**: ${cmd.usage}`
+        embed.setFooter(`Key: <> = it's required for the command to word, [] You don't need to have it, it's optional.`)
+    }
+
+    return message.channel.send(embed.setColor("GREEN").setDescription(info))
 }
