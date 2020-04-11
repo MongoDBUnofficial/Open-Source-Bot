@@ -8,7 +8,7 @@ module.exports = {
     description: "bans the member",
     usage: "<id | mention>",
     run: async (client, message, args) => {
-        const logChannel = message.guild.channels.find(c => c.name === "logs") || message.channel;
+        const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
 
         if (message.deletable) message.delete();
 
@@ -36,7 +36,7 @@ module.exports = {
             .then(msg => msg.delete({ timeout: 3000}))
         }
 
-        const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
+        const toBan = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
         // No member found
         if (!toBan) {
