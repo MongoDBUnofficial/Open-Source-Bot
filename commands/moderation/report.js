@@ -15,7 +15,7 @@ let rMember = message.mentions.members.first() || message.guild.members.cache.ge
 if (!rMember)
 return message.reply("Oops! I couldn't find that person!").then(msg => msg.delete({ timeout: 3000}))
 
-if (rMember.hasPermission("BAN_MEMBERS") || rMember.user.bot)
+if (rMember.hasPermission("KICK_MEMBERS") || rMember.user.bot)
 return message.reply ("You can't report that member!").then(msg => msg.delete({ timeout: 3000}))
 
 if (!args[1])
@@ -31,7 +31,7 @@ const embed = new MessageEmbed()
 .setTimestamp()
 .setFooter(message.guild.name, message.guild.iconURL)
 .setAuthor("Reported member", rMember.user.displayAvatarURL)
-.setDescription(stripIndents`**> Reported Member:** ${rMember}
+.setDescription(    `**> Reported Member:** ${rMember}
 **> Reported by:** ${message.member} (${message.member.id})
 **> Reported in:** ${message.channel}
 **> Reason:** ${args.slice(1).join(" ")}`)
@@ -42,4 +42,4 @@ message.reply("Report has been passed on to the admins!").then(msg => msg.delete
 
     }
 
-}
+}   
