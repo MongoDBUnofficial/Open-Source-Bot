@@ -31,7 +31,7 @@ client.on("ready", () => {
     let statuses = [
      `Game News`,
      `Meme Generators`,
-     `the ATM`
+     `c!commands`
     ];
     
     setInterval(function() {

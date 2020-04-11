@@ -4,7 +4,7 @@ const { stripIndents } = require("common-tags")
 module.exports = {
     name: "help",
     category: "info",
-    description: "Reports a member",
+    description: "Gives you info about commands.",
     usage: "c!help [command]",
     run: async ( client,message, args) => {
 
