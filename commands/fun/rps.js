@@ -14,7 +14,7 @@ const embed = new MessageEmbed()
 .setColor("#ffffff")
 .setFooter(message.guild.me.displayName, client.user.displayAvatarURL)
 .setDescription("React with rock paper or scissors to play!")
-.setTimestamp
+.setTimestamp()
 
 const m = await message.channel.send(embed);
 const reacted = await promptMessage(m, message.author, 30, chooseArr)
