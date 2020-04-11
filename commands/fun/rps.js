@@ -6,7 +6,7 @@ const chooseArr = ["🗻","📰","✂"]
 module.exports = {
     name: "rps",
     category: "fun",
-    description: "Rock Paper Scissors game. React witht he emoji's to play!",
+    description: "Rock Paper Scissors game. React with the emoji's to play!",
     usage: "c!rps",
     run: async ( client,message, args) => {
 
