@@ -2,9 +2,12 @@ const Discord = require("discord.js");
 const client = new Discord.Client({
  disableEveryone: true
 });
+const fs = require("fs");
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
+
+client.categories = fs.readdirSync("./commands/")
 
 //Config
 require("dotenv").config({
@@ -16,6 +19,8 @@ require("dotenv").config({
 require(`./handler/${handler}`)(client);
 
 });
+
+
 
 //Ready
 client.on("ready", () => {
