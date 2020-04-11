@@ -38,6 +38,8 @@ const embed = new MessageEmbed()
 
 channel.send(embed)
 
+message.reply("Report has been passed on to the admins!").then(msg => msg.delete({ timeout: 3000}))
+
     }
 
 }
