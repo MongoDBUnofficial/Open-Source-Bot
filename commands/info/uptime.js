@@ -11,6 +11,8 @@ module.exports = {
 
         const roleColor = message.guild.me.displayHexColor;
 
+        let ms = client.uptime
+
         let seconds = ms / 1000;
         ms = (seconds % 1) * 1000;
         seconds -= (ms / 1000);
