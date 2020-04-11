@@ -1,4 +1,5 @@
-const { MessageEmbed } = require('discord.js');
+const { getMember, formatDate } = require("../../functions.js")
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: "bins",
@@ -8,9 +9,9 @@ module.exports = {
 
         const embed = new MessageEmbed()
 
-    .setFooter(message.author.displayName)
-    .setThumbnail(message.author.user.displayAvatarURL)
-    .setColor(message.author.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
+    .setFooter(member.displayName)
+    .setThumbnail(member.user.displayAvatarURL)
+    .setColor(member.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
     .addField("**Reccomended bin:**", "https://sourceb.in/")
     .setTimestamp()
 
