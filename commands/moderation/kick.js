@@ -81,7 +81,7 @@ message.channel.send(promptEmbed).then(async msg => {
 const emoji = await promptMessage(msg, message.author, 30, ["✅","❌"]);
 
 if (emoji === "✅") {
-    promptEmbed.delete()
+    message.delete()
 
     toKick.kick(args.slice(1).join(" "))
     .catch(err => {
@@ -93,7 +93,7 @@ if (emoji === "✅") {
 }
 
 else if (emoji === "❌") {
-    promptEmbed.delete()
+    message.delete()
 
     message.reply("Kick Cancelled.").then(msg => msg.delete({ timeout: 3000}))
 }
