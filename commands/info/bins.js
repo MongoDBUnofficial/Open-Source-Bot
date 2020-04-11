@@ -8,9 +8,9 @@ module.exports = {
 
         const embed = new MessageEmbed()
 
-    .setFooter(member.displayName)
-    .setThumbnail(member.user.displayAvatarURL)
-    .setColor(member.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
+    .setFooter(message.author.displayName)
+    .setThumbnail(message.author.user.displayAvatarURL)
+    .setColor(message.author.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
     .addField("**Reccomended bin:**", "https://sourceb.in/")
     .setTimestamp()
 
