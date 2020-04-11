@@ -3,18 +3,17 @@ const { stripIndents } = require("common-tags")
 
 module.exports = {
     name: "help",
-    aliases: ["h"],
     category: "info",
     description: "Reports a member",
-    usage: "[commands | alias]",
+    usage: "c!help [command]",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 
     
 if(args[0]) {
-    return getCMD(client, message, args[0]).then(msg => msg.delete({ timeout: 30000}))
+    return getCMD(client, message, args[0]).then(msg => msg.delete({ timeout: 50000}))
 } else {
-    return getAll(client, message).then(msg => msg.delete({ timeout: 30000}))
+    return getAll(client, message).then(msg => msg.delete({ timeout: 50000}))
 
 }
 
@@ -55,7 +54,7 @@ function getCMD(client, message, input) {
     if (cmd.description) info += `\n**Description**: ${cmd.description}`;
     if (cmd.usage) {
         info += `\n**Usage**: ${cmd.usage}`
-        embed.setFooter(`Key: <> = it's required for the command to word, [] You don't need to have it, it's optional.`)
+        embed.setFooter(`Information in <> is required for the command to work. [] Is optional.`)
     }
 
     return message.channel.send(embed.setColor("GREEN").setDescription(info))

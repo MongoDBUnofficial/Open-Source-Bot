@@ -6,7 +6,7 @@ module.exports = {
     name: "ban",
     category: "moderation",
     description: "bans the member",
-    usage: "<id | mention>",
+    usage: "c!ban <mention>",
     run: async (client, message, args) => {
         const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
 
@@ -83,7 +83,7 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
             const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
             // Verification stuffs
-            if (emoji === "✅") {
+            if (emoji === "✅") { 
                 msg.delete();
 
                 toBan.ban(args.slice(1).join(" "))

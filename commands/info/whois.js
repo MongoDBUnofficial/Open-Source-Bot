@@ -7,7 +7,7 @@ module.exports = {
     aliases: ["userinfo","user","who"],
     category: "info",
     description: "Brings back user information.",
-    usage: "[username | id, | mention]",
+    usage: "c!whois [mention]",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();
