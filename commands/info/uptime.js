@@ -14,7 +14,7 @@ module.exports = {
         let ms = client.uptime
 
         let seconds = ms / 1000;
-        ms = (seconds % 1) * 1000;
+        ms = Math.round((seconds % 1) * 1000);
         seconds -= (ms / 1000);
         let minutes = seconds / 60;
         seconds = (minutes % 1) * 60;
@@ -23,7 +23,7 @@ module.exports = {
         minutes = (hours % 1) * 60;
         hours -= (minutes / 60);
         let time = ""+hours+":"+minutes+":"+seconds+"."+ms;
-
+        
         const embed = new MessageEmbed()
 
     .setColor(roleColor)
