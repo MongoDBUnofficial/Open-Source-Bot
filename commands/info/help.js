@@ -11,7 +11,11 @@ module.exports = {
 
         if (message.deletable) message.delete(); 
     
-
+if(args[0]) {
+    return getCMD(client, message, args[0])
+} else {
+    return getAll(client, message)
+}
 
     }
 }
