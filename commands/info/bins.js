@@ -9,7 +9,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
 
-    .setFooter(message.author.user.username)
+    .setFooter(message.author.tag)
     .setThumbnail(message.author.AvatarURL)
     .setColor(message.author.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
     .addField("**Reccomended bin:**", "https://sourceb.in/")
