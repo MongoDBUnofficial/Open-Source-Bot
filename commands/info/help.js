@@ -46,7 +46,7 @@ function getCMD(client, message, input) {
     let info = `No information found for that command! **${input.toLowerCase()}**`;
 
     if (!cmd) {
-        return message.channel.send(embed.setColor("RED").setDescription("Info"));
+        return message.channel.send(embed.setColor("RED").setDescription("Command has not been found!"));
     }
 
     if (cmd.name) info = `**Command Name**: ${cmd.name}`;
