@@ -20,7 +20,6 @@ const arrayOfChoices = [
     "http://www.quakelive.com/",
     "https://www.blackmesasource.com/",
     "https://www.battlefield.com/battlefield-1942",
-    "https://www.starwars.com/video/star-wars-commander-worlds-in-conflict-official-trailer",
     "https://www.kongregate.com/games/graebor/sort-the-court",
     "https://plarium.com/en/strategy-games/throne-kingdom-at-war/game/",
     "https://www.warframe.com/",
