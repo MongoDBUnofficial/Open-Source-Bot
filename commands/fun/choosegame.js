@@ -29,9 +29,6 @@ const arrayOfChoice = [
 function getChoice() {
     return arrayOfChoices[Math.round(Math.random() * arrayOfChoices.length)];
   }
-  
-let count = 0;
-if(count >= links.length) count = 0;
 
 const embed = new MessageEmbed()
 .setTitle("Random Game Generator")
