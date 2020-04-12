@@ -2,10 +2,10 @@ const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags")
 
 module.exports = {
-    name: "help",
-    category: "info",
-    description: "Gives you info about commands.",
-    usage: "c!help [command]",
+    name: "choosegame",
+    category: "fun",
+    description: "Returns a random game.",
+    usage: "c!choosegame",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 
