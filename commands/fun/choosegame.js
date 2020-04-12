@@ -10,7 +10,7 @@ module.exports = {
 
         if (message.deletable) message.delete(); 
     
-const arrayOfChoice = [
+const arrayOfChoices = [
     "https://jackboxgames.com/",
     "http://slither.io/",
     "https://hole-io.com/",
