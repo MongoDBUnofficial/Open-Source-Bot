@@ -43,7 +43,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
     
-    if(message.content.startsWith(`${client.user.tag}`)) {
+    if(message.content.startsWith(`@Crypto`)) {
 
     message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
     
