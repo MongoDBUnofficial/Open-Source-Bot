@@ -47,6 +47,7 @@ client.on("message", async message => {
 
     message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
     
+    }
     const prefix = "c!";
 
     if (message.author.bot) return;
@@ -66,8 +67,6 @@ client.on("message", async message => {
     if (command) command.run(client, message, args);
 
 
-
-}
 
 });
 
