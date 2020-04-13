@@ -71,7 +71,7 @@ client.on('message', message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if(message.content.startsWith(`@Crypto#4963`)) {
+    if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto#4963") {
 
     message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
     
