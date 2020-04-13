@@ -1,3 +1,5 @@
+const { MessageEmbed } = require("discord.js");
+
 module.exports = {
     name: "ping",
     category: "info",
@@ -6,9 +8,12 @@ module.exports = {
 
         if (message.deletable) message.delete();
 
-        const msg = await message.channel.send(`Pinging...`)
+        const embed = new MessageEmbed()
+        .setTitle("🏓 Ping!")
+        .setDescription(`Latency is ${Math.floor(msg.createdAt - message.createdAt)}
+        API Latency ${Math.round(client.ws.ping)}ms`)
 
-        msg.edit(`Pong\nLatency is ${Math.floor(msg.createdAt - message.createdAt)}\n API Latency ${Math.round(client.ws.ping)}ms`);    
+        message.channel.send(embed)
     }
 
 }
