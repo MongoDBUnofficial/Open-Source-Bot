@@ -75,7 +75,9 @@ client.on('message', message => {
     if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto#4963") {
 
         const embed = new MessageEmbed()
-        .setDescription(`My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.`)
+        .setDescription(`My prefix is c!
+        For help on a command please do c!help [command name].
+        Do c!help for commands list.`)
 
         message.channel.send(embed)
 
