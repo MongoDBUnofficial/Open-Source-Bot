@@ -43,11 +43,7 @@ client.on("ready", () => {
 
 client.on("message", async message => {
     
-    if(message.content.startsWith(`@Crypto`)) {
-
-    message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
     
-    }
     const prefix = "c!";
 
     if (message.author.bot) return;
@@ -70,6 +66,20 @@ client.on("message", async message => {
 
 });
 
+client.on('message', message => {
+
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    if(message.content.startsWith(`@Crypto`)) {
+
+    message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
+    
+    }
+
+});
+
+
 //reply prefix to mention
 
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN)
