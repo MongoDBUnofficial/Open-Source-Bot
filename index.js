@@ -72,7 +72,7 @@ client.on('message', message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto#4963") {
+    if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto [BETA]#4963") {
 
         const embed = new MessageEmbed()
         .setDescription(`My prefix is c!
