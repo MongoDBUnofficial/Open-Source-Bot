@@ -32,6 +32,7 @@ module.exports = {
     .setTitle("Uptime")
     .setDescription(time)
     .setTimestamp()
+    .setColor('GREEN')
 
     message.channel.send(embed)
     
