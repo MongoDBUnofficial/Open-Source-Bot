@@ -31,8 +31,10 @@ client.on("ready", () => {
   
     let statuses = [
      `Game News`,
-     `Meme Generators`,
-     `c!commands`
+     `BETA Construction`,
+     `c!help`,
+     `c!ping`,
+     `Reports`
     ];
     
     setInterval(function() {
