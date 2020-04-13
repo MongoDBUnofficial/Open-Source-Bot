@@ -9,7 +9,8 @@ module.exports = {
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 
-    
+        const roleColor = message.guild.me.displayHexColor;
+        
 const arrayOfChoices = [
     "https://jackboxgames.com/",
     "http://slither.io/",
@@ -31,7 +32,9 @@ function getChoice() {
 
 const embed = new MessageEmbed()
 .setTitle("Random Game Generator")
+.setColor(roleColor)
 .setDescription(getChoice());
+
 
 message.channel.send(embed)
 

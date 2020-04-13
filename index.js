@@ -68,7 +68,7 @@ client.on("message", async message => {
 });
 
 client.on('message', message => {
-
+    const roleColor = message.guild.me.displayHexColor;
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
@@ -78,7 +78,7 @@ client.on('message', message => {
         .setDescription(`My prefix is c!
         For help on a command please do c!help [command name].
         Do c!help for commands list.`)
-        .setColor('GREEN')
+        .setColor(roleColor)
 
         message.channel.send(embed)
 
