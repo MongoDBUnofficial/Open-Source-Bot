@@ -10,7 +10,7 @@ module.exports = {
 
         if (message.deletable) message.delete(); 
         const roleColor = message.guild.me.displayHexColor;
-        
+
 const arrayOfChoices = [
     "https://jackboxgames.com/",
     "http://slither.io/",
@@ -37,8 +37,6 @@ const embed = new MessageEmbed()
 
 
 message.channel.send(embed)
-
-count++;
 
     }
 }
