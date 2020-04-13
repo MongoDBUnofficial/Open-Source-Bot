@@ -59,10 +59,7 @@ client.on("message", async message => {
     if (!command) command = client.commands.get(client.aliases.get(cmd));
 
     if (command) command.run(client, message, args);
-
-});
-
-//reply prefix to mention
+    
 if(message.content.startsWith(`${client.user.tag}`)) {
 
 const embed = new MessageEmbed()
@@ -70,5 +67,9 @@ const embed = new MessageEmbed()
 .setFooter("Do c!help for commands list.")
 
 }
+
+});
+
+//reply prefix to mention
 
 client.login(process.env.TOKEN);
