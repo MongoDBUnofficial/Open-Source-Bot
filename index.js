@@ -77,6 +77,8 @@ client.on('message', message => {
         const embed = new MessageEmbed()
         .setDescription(`My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.`)
 
+        message.channel.send(embed)
+
     
     }
 
