@@ -1,5 +1,5 @@
 
-const { Discord, MessageEmbed } = require("discord.js");
+const  Discord, MessageEmbed  = require("discord.js");
 const client = new Discord.Client({
  disableEveryone: true
 });
