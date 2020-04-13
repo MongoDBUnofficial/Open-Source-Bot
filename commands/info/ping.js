@@ -11,7 +11,7 @@ module.exports = {
         const msg = new MessageEmbed()
         .setDescription("Pinging...")
 
-        message.channel.send(embed)
+        message.channel.send(msg)
 
         
         msg.edit()
