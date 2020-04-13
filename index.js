@@ -1,5 +1,5 @@
 
-const Discord = require("discord.js");
+const { Discord, MessageEmbed } = require("discord.js");
 const client = new Discord.Client({
  disableEveryone: true
 });
@@ -61,5 +61,14 @@ client.on("message", async message => {
     if (command) command.run(client, message, args);
 
 });
+
+//reply prefix to mention
+if(message.content.startsWith(`${client.user.tag}`)) {
+
+const embed = new MessageEmbed()
+.setDescription("My prefix is c! /n For help on a command please do c!help [command name]")
+.setFooter("Do c!help for commands list.")
+
+}
 
 client.login(process.env.TOKEN);
