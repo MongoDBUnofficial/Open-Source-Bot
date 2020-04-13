@@ -78,6 +78,7 @@ client.on('message', message => {
         .setDescription(`My prefix is c!
         For help on a command please do c!help [command name].
         Do c!help for commands list.`)
+        .setColor('GREEN')
 
         message.channel.send(embed)
 
