@@ -12,9 +12,9 @@ module.exports = {
         .setDescription("Pinging...")
 
         message.channel.send(msg)
-
+        message.delete()
         
-        msg.edit()
+        const embed = new MessageEmbed()
         .setTitle("🏓 Ping!")
         .setDescription(`Latency is ${Math.floor(msg.createdAt - message.createdAt)}
         API Latency ${Math.round(client.ws.ping)}ms`)
