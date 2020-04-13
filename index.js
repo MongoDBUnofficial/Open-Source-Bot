@@ -1,5 +1,6 @@
 
 const Discord = require("discord.js");
+const MessageEmbed = Discord.MessageEmbed;
 const client = new Discord.Client({
  disableEveryone: true
 });
@@ -73,7 +74,9 @@ client.on('message', message => {
 
     if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto#4963") {
 
-    message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
+        const embed = new MessageEmbed()
+        .setDescription(`My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.`)
+
     
     }
 
