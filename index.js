@@ -59,12 +59,10 @@ client.on("message", async message => {
     if (!command) command = client.commands.get(client.aliases.get(cmd));
 
     if (command) command.run(client, message, args);
-    
+
 if(message.content.startsWith(`${client.user.tag}`)) {
 
-const embed = new MessageEmbed()
-.setDescription("My prefix is c! /n For help on a command please do c!help [command name]")
-.setFooter("Do c!help for commands list.")
+    message.reply("My prefix is c! /n For help on a command please do c!help [command name]. /n Do c!help for commands list.")
 
 }
 
