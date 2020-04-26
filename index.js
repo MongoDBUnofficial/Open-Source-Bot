@@ -35,7 +35,9 @@ client.on("ready", () => {
      `BETA Construction`,
      `c!help`,
      `c!ping`,
-     `Reports`
+     `Reports`,
+     `${client.users.size} users!`,
+     `${client.guilds.size} servers!`
     ];
     
     setInterval(function() {
