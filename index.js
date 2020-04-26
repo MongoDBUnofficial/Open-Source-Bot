@@ -36,7 +36,7 @@ client.on("ready", () => {
      `c!help`,
      `c!ping`,
      `Reports`,
-     `${client.guilds.cache.array().length} users`,
+     `${()=>{let sum = 0;client.guilds.forEach((guild)=>{sum+=guild.members.count});sum}} users`,
      `${client.users.cache.array().length} servers`
     ];
     
