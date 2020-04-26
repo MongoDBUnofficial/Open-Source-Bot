@@ -36,8 +36,8 @@ client.on("ready", () => {
      `c!help`,
      `c!ping`,
      `Reports`,
-     `${discord.guilds.array().length} users`,
-     `${discord.users.array().length} servers`
+     `${client.guilds.array().length} users`,
+     `${client.users.array().length} servers`
     ];
     
     setInterval(function() {
