@@ -16,7 +16,7 @@ module.exports = {
         
         const embed = new MessageEmbed()
         .setTitle("🏓 Ping!")
-        .setDescription(`Latency is ${Math.floor(msg.createdAt - embed.createdAt)}
+        .setDescription(`Latency is ${Math.floor(msg.createdAt - message.createdAt)}
         API Latency ${Math.round(client.ws.ping)}ms`)
 
         
