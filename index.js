@@ -36,8 +36,8 @@ client.on("ready", () => {
      `c!help`,
      `c!ping`,
      `Reports`,
-     `${client.users.size} users!`,
-     `${client.guilds.size} servers!`
+     `${client.users.length} users!`,
+     `${client.guilds.length} servers!`
     ];
     
     setInterval(function() {
