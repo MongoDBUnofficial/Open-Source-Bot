@@ -36,8 +36,8 @@ client.on("ready", () => {
      `c!help`,
      `c!ping`,
      `Reports`,
-     `${()=>{let sum = 0;client.guilds.forEach((guild)=>{sum+=guild.members.count});sum}} users`,
-     `${client.users.cache.array().length} servers`
+     `${client.users.cache.size} users`,
+     `${client.guilds.cache.size} servers`
     ];
     
     setInterval(function() {
