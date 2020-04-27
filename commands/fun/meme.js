@@ -1,18 +1,10 @@
-
-module.exports = {
-    name: "ping",
-    category: "info",
-    description: "Returns latency and API ms.",
-    run: async ( client,message, args) => {
-
-
         const { RichEmbed } = require("discord.js");
         const randomPuppy = require("random-puppy");
         
         module.exports = {
             name: "meme",
             category: "fun",
-            description: "Sends an epic meme",
+            description: "Activates the meme machine 🖨.",
             run: async (client, message, args) => {
 
                 const subReddits = ["dankmeme", "meme", "me_irl"];
@@ -29,6 +21,3 @@ module.exports = {
                 message.channel.send(embed);
             }
         }
-
-    }
-}
