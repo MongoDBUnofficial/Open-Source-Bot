@@ -7,7 +7,7 @@
             description: "Activates the meme machine 🖨.",
             run: async (client, message, args) => {
 
-                const subReddits = ["dankmeme", "meme", "me_irl", "PewdiepieSubmissions"];
+                const subReddits = ["dankmeme", "meme", "me_irl", "PewdiepieSubmissions", "DankMemesFromSite19"];
 
                 const random = subReddits[Math.floor(Math.random() * subReddits.length)];
         
