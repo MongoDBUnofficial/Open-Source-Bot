@@ -11,9 +11,9 @@ module.exports = {
         if (message.deletable) message.delete(); 
     
 if(args[0]) {
-    return getCMD(client, message, args[0]).then(msg => msg.delete({ timeout: 50000}))
+    return getCMD(client, message, args[0])
 } else {
-    return getAll(client, message).then(msg => msg.delete({ timeout: 50000}))
+    return getAll(client, message)
 
 }
 
