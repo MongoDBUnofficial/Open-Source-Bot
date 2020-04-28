@@ -21,7 +21,7 @@ module.exports = {
         const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
 
         const result = await getResult(reacted, botChoice);
-        if (message.guild.me.permissions.has("MANAGE_MESSAGES")) await <Message>.reactions.removeAll();
+        if (message.guild.me.permissions.has("MANAGE_MESSAGES")) await m.reactions.removeAll();
 
         embed
             .setDescription("")
