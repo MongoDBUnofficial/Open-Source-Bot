@@ -1,3 +1,10 @@
+module.exports = {
+    name: "eval",
+    category: "owner",
+    description: "[Owner Only]",
+    run: async ( client,message, args) => {
+
+
 const { util } = require("util");
 
 module.exports.run = (client, message, args) => {
@@ -15,5 +22,8 @@ if (!message.author.id === "324593687369744385") {
         return message.channel.send(`**Output:**\n\`\`\`js\n${output}\n\`\`\``);
     } catch(err) {
         return message.channel.send(`**Error:**\n\`${err}\``);
+    }
+}
+
     }
 }
