@@ -21,7 +21,7 @@ module.exports = {
         const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
 
         const result = await getResult(reacted, botChoice);
-        m.reactions.removeAll().catch(console.log("Missing Permissions (Removing reactions) - rps command."))
+        if (message.guild.me.permissions.has("MANAGE_MESSAGES")) await <Message>.reactions.removeAll();
 
         embed
             .setDescription("")
