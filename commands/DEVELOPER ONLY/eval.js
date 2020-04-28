@@ -2,7 +2,7 @@ var _ = require("underscore");
 
 module.exports = {
     name: "eval",
-    category: "owner",
+    category: "DEVELOPER ONLY",
     description: "[DEVELOPER ONLY]",
     run: async ( client,message, args) => {
 
