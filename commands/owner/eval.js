@@ -6,11 +6,10 @@ module.exports = {
     description: "[Owner Only]",
     run: async ( client,message, args) => {
 
-
-
-
-module.exports.run = (client, message, args) => {
-
+        if (!message.author.id === "324593687369744385") {
+            message.reply("You are not the bot owner⁉")
+            return;
+        }
 
 	if (!args[0]) return message.reply("you must provide JavaScript code!");
     
@@ -21,7 +20,5 @@ module.exports.run = (client, message, args) => {
     } catch(err) {
         return message.channel.send(`**Error:**\n\`${err}\``);
     }
-}
-
     }
 }
