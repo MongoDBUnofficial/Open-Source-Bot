@@ -11,10 +11,6 @@ module.exports = {
 
 module.exports.run = (client, message, args) => {
 
-if (!message.author.id === "324593687369744385") {
-    message.reply("You are not the bot owner!")
-    return;
-}
 
 	if (!args[0]) return message.reply("you must provide JavaScript code!");
     
