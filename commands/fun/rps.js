@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, MessageReaction } = require("discord.js");
 const { promptMessage } = require("../../functions.js");
 
 const chooseArr = ["🗻", "📰", "✂"];
@@ -21,7 +21,7 @@ module.exports = {
         const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
 
         const result = await getResult(reacted, botChoice);
-        await m.messageReactionRemoveAll();
+        await m.MessageReaction.remove();
 
         embed
             .setDescription("")
