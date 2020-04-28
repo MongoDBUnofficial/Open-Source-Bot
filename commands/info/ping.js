@@ -6,7 +6,7 @@ module.exports = {
     description: "Returns latency and API ms.",
     run: async ( client,message, args) => {
 
-        if (message.deletable) message.delete();
+      
 
         const msg = new MessageEmbed()
         .setDescription("Pinging...")
