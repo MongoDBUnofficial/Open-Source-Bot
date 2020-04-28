@@ -6,19 +6,9 @@ module.exports = {
     description: "Returns latency and API ms.",
     run: async ( client,message, args) => {
 
-      
+        const m = await message.channel.send("Ping!");
 
-        const msg = new MessageEmbed()
-        .setDescription("Pinging...")
-
-        message.channel.send(msg)
-       
-        msg.delete()
-        
-        const embed = new MessageEmbed()
-        .setTitle("🏓 Ping!")
-        .setDescription(`Latency is ${Math.floor(msg.createdAt - message.createdAt)}
-        API Latency ${Math.round(client.ws.ping)}ms`)
+        m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. WS Latency is ${Math.round(client.ws.ping)}ms`);
 
         message.channel.send(embed)
         
