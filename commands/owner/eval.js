@@ -1,4 +1,4 @@
-const { util } = require("util");
+const { util, inspect } = require("util");
 
 module.exports = {
     name: "eval",
