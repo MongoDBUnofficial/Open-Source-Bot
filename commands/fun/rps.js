@@ -21,7 +21,7 @@ module.exports = {
         const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
 
         const result = await getResult(reacted, botChoice);
-        m.reactions.removeAll().catch(console.log(err))
+        m.reactions.removeAll().catch(console.log("Missing Permissions (Removing reactions) - rps command."))
 
         embed
             .setDescription("")
