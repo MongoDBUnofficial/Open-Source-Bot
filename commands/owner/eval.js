@@ -1,3 +1,5 @@
+const { util } = require("util");
+
 module.exports = {
     name: "eval",
     category: "owner",
@@ -5,7 +7,7 @@ module.exports = {
     run: async ( client,message, args) => {
 
 
-const { util } = require("util");
+
 
 module.exports.run = (client, message, args) => {
 
