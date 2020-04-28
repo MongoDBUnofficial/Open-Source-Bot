@@ -72,6 +72,7 @@ client.on("message", async message => {
 
 });
 
+//reply prefix to mention
 client.on('message', message => {
     const roleColor = message.guild.me.displayHexColor;
     if(message.author.bot) return;
@@ -93,6 +94,6 @@ client.on('message', message => {
 });
 
 
-//reply prefix to mention
+
 
 client.login(process.env.TOKEN)
