@@ -7,10 +7,12 @@ module.exports = {
 
 if(message.content.startsWith("c!clear Infinity")) {
     message.reply("❌ Thats not a number!")
+    return;
 }
 
 if(message.content.startsWith("c!clear infinity")) {
     message.reply("❌ Thats not a number!")
+    return;
 }
 
         if (message.deletable) {
