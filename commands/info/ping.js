@@ -12,7 +12,7 @@ module.exports = {
         .setDescription("Pinging...")
 
         message.channel.send(msg)
-        message.bulkDelete(1)
+        message.delete()
         
         const embed = new MessageEmbed()
         .setTitle("🏓 Ping!")
