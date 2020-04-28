@@ -5,12 +5,7 @@ module.exports = {
     description: "Purges the ammount of messages you enter.",
     run: async (client, message, args) => {
 
-if(message.content.startsWith("c!clear Infinity")) {
-    message.reply("❌ Thats not a number!")
-    return;
-}
-
-if(message.content.startsWith("c!clear infinity")) {
+if(message.content.toLowerCase().startsWith("c!clear infinity")) {
     message.reply("❌ Thats not a number!")
     return;
 }
