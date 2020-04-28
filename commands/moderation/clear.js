@@ -5,6 +5,7 @@ module.exports = {
     description: "Purges the ammount of messages you enter.",
     run: async (client, message, args) => {
 
+        //infinity glitch
 if(message.content.toLowerCase().startsWith("c!clear infinity")) {
     message.reply("❌ Thats not a number!")
     return;
@@ -39,6 +40,6 @@ if(message.content.toLowerCase().startsWith("c!clear infinity")) {
 
         message.channel.bulkDelete(deleteAmount, true)
             .then(deleted => message.channel.send(`Deleted ${deleted.size} messages.`))
-            .catch(err => message.reply(`There was an error deleting those messages. ${err}`));
+            .catch(err => message.reply(`There was an error deleting those messages. ${err} Please contact the developer by joining this server https://discord.gg/69QAACN.`));
     }
 }
