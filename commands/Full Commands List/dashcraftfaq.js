@@ -35,7 +35,7 @@ message.reply("This command is only for a certain server. ")
 
             message.channel.send(dashcraftEmbed)
 }
- else if (emoji === "❌") {
+ else if (emoji === ":heroku:705174731162255502") {
 
 msg.delete()
 
