@@ -3,9 +3,9 @@ const { stripIndents } = require("common-tags")
 const { formatDate } = require("../../functions.js")
 
 module.exports = {
-    name: "botinfo",
+    name: "exembedtest",
     category: "info",
-    description: "Returns with bot stats.",
+    description: "devtest",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 
