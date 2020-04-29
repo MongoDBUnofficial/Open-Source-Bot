@@ -23,7 +23,6 @@ message.reply("This command is only for a certain server. ")
             { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true},
         )
         .setColor("GREEN")
-        .setAuthor(`test`)
         .setDescription(`pick an emoji test`)
 
     // Send the message
