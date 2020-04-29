@@ -1,6 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags")
 const { formatDate } = require("../../functions.js")
+const { djslogo } = require("../../resources/djsresourcelogo.png")
 
 module.exports = {
     name: "botinfo",
@@ -15,6 +16,8 @@ module.exports = {
 
 const embed = new MessageEmbed()
 .setTitle("Bot Information")
+.setAuthor(client.user.username)
+.setThumbnail(djslogo)
 .addFields(
 
     { name : 'Users:', value : `${client.users.cache.size} users`},
