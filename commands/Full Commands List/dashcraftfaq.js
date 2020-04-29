@@ -19,7 +19,7 @@ message.reply("This command is only for a certain server. ")
         .setDescription(`pick an emoji test`)
 
     // Send the message
-    const m = await message.channel.send(embed);
+    const m = await message.channel.send(promptEmbed);
     await message.channel.send(promptEmbed).then(async msg => {
         // Await the reactions and the reactioncollector
         const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
