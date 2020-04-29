@@ -49,10 +49,11 @@ const herokuEmbed = new MessageEmbed()
 .setTitle("Heroku Help")
 .setDescription(`First, make sure your profile says
 \`\`\`Worker: node index.js\`\`\`
+**Note: index.js is known as default bot file (as it mentioned in the video), but if your main bot file name is anything else, replace index.js to your main bot file. for example if my main bot file name is bot.js, I will put this as my Procfile: \`Worker: node bot.js\`**
 
 **Now, do the following.**
 
-After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. after making sure about that, Click on deploy branch on bottom. it should check all of the build steps, if it didn't happened, means there is something wrong with your code or your setup, contact us at support and we will help you to fix it. Anyways, if it successfully checked everything, means your ready to use the dynos, go to recourses tab and then refresh your page or browser, then you should see the dyons, then follow the instructions in the video while showing up dynos. If you still have any other problems, let us know at the support channel. Our Support team is ready out there!`)
+After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. After making sure about that, Click on deploy branch on bottom. It should check all of the build steps, if it didn't happenen, it means there is something wrong with your code or your setup, contact us at support and we will help you to fix it. If it successfully checked everything, it means your ready to use the dynos, go to recourses tab and then refresh your page or browser, then you should see the dyons, then follow the instructions in the video while showing up dynos. If you still have any other problems, let us know at the support channel. Our Support team is ready out there!`)
 
 message.channel.send(herokuEmbed)
 
