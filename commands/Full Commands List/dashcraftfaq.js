@@ -52,7 +52,8 @@ const herokuEmbed = new MessageEmbed()
 After that, do the following.
 \`\`\`Go to Deploy and scroll to the bottom and click Deploy Branch.\`\`\`
 After that, wait a bit and then
-go to resouces and your dyno's should be there.
+go to resouces and refresh until your
+dyno's are there.
 If not, get help in the Support channel.`)
 
 message.channel.send(herokuEmbed)
