@@ -27,6 +27,7 @@ const embed = new MessageEmbed()
 
 )
 .addField('Joined this server at:', `${joined}`, true)
+.setImage('https://i.imgur.com/s9VqkIi.png')
 .setColor(roleColor)
 
 
