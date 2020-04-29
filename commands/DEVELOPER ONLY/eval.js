@@ -6,7 +6,7 @@ module.exports = {
     description: "[DEVELOPER ONLY]",
     run: async ( client,message, args) => {
 
-        if(message.author.user.id !== 324593687369744385) return;
+        if(message.author.id !== 324593687369744385) return;
 
         var params = message.content.split(" ");
         params = _.rest(params, 1);
