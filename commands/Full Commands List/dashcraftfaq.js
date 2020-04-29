@@ -38,7 +38,7 @@ message.reply("This command is only for a certain server. ")
 
             const dashcraftEmbed = new MessageEmbed()
             .setTitle("Who is DashCraft?")
-            .addField("Dashcraft, or Poryafm12¹ on Discord is the creator of http://youtube.com/dashcraft123")
+            .setDescription("Dashcraft, or Poryafm12¹ on Discord is the creator of http://youtube.com/dashcraft123")
 
             message.channel.send(dashcraftEmbed)
 }
