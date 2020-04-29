@@ -31,6 +31,8 @@ message.reply("This command is only for a certain server. ")
             const dashcraftEmbed = new MessageEmbed()
             .setTitle("Heroku Help")
             .setDescription("test")
+
+            message.channel.send(dashcraftEmbed)
 }
  else if (emoji === "❌") {
 
@@ -40,7 +42,7 @@ const herokuEmbed = new MessageEmbed()
 .setTitle("Heroku Help")
 .setDescription("test")
 
-message.channel.send("")
+message.channel.send(herokuEmbed)
 
         }
     });
