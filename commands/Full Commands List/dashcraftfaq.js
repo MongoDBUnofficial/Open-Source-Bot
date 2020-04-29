@@ -30,7 +30,9 @@ message.reply("This command is only for a certain server. ")
 }
  else if (emoji === "❌") {
 
-
+promptMessage
+.setTitle("test")
+    m.edit(promptMessage)
 
         }
     });
