@@ -34,7 +34,7 @@ module.exports = {
         .addField('Status', `\`\`\`${status}\`\`\``)
         .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
         .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
-        .setFooter(client.username, message.guild.iconURL())
+        .setFooter(client.user.username, message.guild.iconURL())
         .setImage('https://cdn.discordapp.com/attachments/657250830310965259/657252699208810517/unknown.png')
         .setThumbnail(whoismember.displayAvatarURL())
         .setTimestamp()
