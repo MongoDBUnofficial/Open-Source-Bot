@@ -11,5 +11,7 @@ module.exports = {
 message.reply("This command is only for a certain server. ")
  return;
         }
+
+        message.reply("TEST 1.03 WORKED.")
     }
 }
