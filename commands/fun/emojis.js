@@ -28,7 +28,7 @@ module.exports = {
         })
         let Embed = new MessageEmbed()
         .setTitle(`All emojis in ${message.guild.name}.`)
-        .setDescription(`**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}\n\n**Total: ${OverallEmojis}**`)
+        .setDescription(`**Animated: ${Animated}**:\n${EmojisAnimated}\n\n**Normal: ${EmojiCount}**:\n${Emojis}\n\n**Total: ${OverallEmojis}**`)
         .setThumbnail(message.guild.iconURL)
         .setColor(`RANDOM`)
         message.channel.send(Embed)
