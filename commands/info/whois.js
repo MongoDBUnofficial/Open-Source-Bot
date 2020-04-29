@@ -12,37 +12,36 @@ module.exports = {
 
         if (message.deletable) message.delete();
 
-const member = getMember(message, args.join(" "))
-
-// Member Variables
-const joined = formatDate(member.joinedAt);
-const roles = member.roles.cache
-    .filter(r => r.id !== message.guild.id)
-    .map(r => r)
-    .join(", ") || "none";
-
-    // User Variables
-    const created = formatDate(member.user.createdAt)
-
-    const embed = new MessageEmbed()
-    .setFooter(member.displayName)
-    .setThumbnail(member.user.displayAvatarURL)
-    .setColor(member.displayHexColor === "#000000" ? "#ffffff" : member.displayHexColor)
-    .addField('Member Information', stripIndents`**Display name:** ${member.displayName}
-    **Joined at:** ${joined}
-    **Roles:** ${roles}`, true)
-
-    .addField('User Information', stripIndents`**ID:** ${member.user.id}
-    **Username:** ${member.user.username}
-    **Discord Tag:** ${member.user.tag}
-    **Created at:** ${created}`, true)
-
-    .setTimestamp()
-
-    if (member.user.presence.game)
-    embed.addField('Currently playing', `**Name:** ${message.user.presence.game.name}`)
-
-    message.channel.send(embed)
+        const whoismember = message.mentions.users.first() || message.author;
+        const member = message.guild.member(whoismember);
+        let status = '';
+        if (whoismember.presence.status === 'dnd'){
+          status = 'Do Not Disturb';
+            } else if (whoismember.presence.status === 'online'){
+          status = 'Online';
+            } else if (whoismember.presence.status === 'offline'){
+          status = 'Offline';
+            } else if (whoismember.presence.status === 'idle'){
+          status = 'Idle';
+            } else if (whoismember.presence.status === 'transparent'){
+          status = 'Transparent';
+            }
+        const whoisEmbed = new Discord.MessageEmbed()
+        .setAuthor('USER INFORMATION')
+        .addField('Username', `\`\`\`${whoismember.tag}\`\`\``, true)
+        .addField('User ID', `\`\`\`${whoismember.id}\`\`\``, true)
+        .addField('Server', `\`\`\`${message.guild.name}\`\`\``)
+        .addField('Nickname', `\`\`\`${member.nickname ? member.nickname : 'No Nickname'}\`\`\``)
+        .addField('Status', `\`\`\`${status}\`\`\``)
+        .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
+        .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
+        .setFooter('Say !membercommands for a list of commands.', message.guild.iconURL())
+        .setImage('https://cdn.discordapp.com/attachments/657250830310965259/657252699208810517/unknown.png')
+        .setThumbnail(whoismember.displayAvatarURL())
+        .setTimestamp()
+        .setColor(whoismember.displayHexColor === "#000000" ? "#ffffff" : whoismember.displayHexColor)
+        message.channel.send(whoisEmbed)
+        return;
     }
 
 }
