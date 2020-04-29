@@ -13,11 +13,13 @@ message.reply("This command is only for a certain server. ")
         }
 
         const promptEmbed = new MessageEmbed()
+        .setTitle("Dashcraft FAQ")
         .setColor("GREEN")
         .setAuthor(`test`)
         .setDescription(`pick an emoji test`)
 
     // Send the message
+    const m = await message.channel.send(embed);
     await message.channel.send(promptEmbed).then(async msg => {
         // Await the reactions and the reactioncollector
         const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
@@ -26,14 +28,14 @@ message.reply("This command is only for a certain server. ")
         if (emoji === "✅") { 
            
 
-            message.edit(promptMessage)
+            promptMessage.edit()
             .setTitle("Heroku Dyno Help")
             .setDescription("test")
 
 }
  else if (emoji === "❌") {
 
-    message.edit(promptMessage)
+    m.edit(promptMessage)
     .setTitle("no u")
     .setDescription("no u")
 
