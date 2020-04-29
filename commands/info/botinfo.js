@@ -24,7 +24,6 @@ const embed = new MessageEmbed()
     { name : 'Users:', value : `${client.users.cache.size} users`},
     { name : 'Servers:', value : `${client.guilds.cache.size} servers`},
     { name : 'Tag:', value : `${client.user.tag}`, inline: true},
-    {name : ' ', value: ' ', inline: true},
     { name : 'Created At:', value : `${botcreated} `, inline: true},
 
 )
