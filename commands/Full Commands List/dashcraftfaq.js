@@ -19,8 +19,7 @@ message.reply("This command is only for a certain server. ")
         .setDescription(`pick an emoji test`)
 
     // Send the message
-    const m = await message.channel.send(promptEmbed);
-    await message.channel.send(promptEmbed).then(async msg => {
+    const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
         const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
@@ -28,18 +27,10 @@ message.reply("This command is only for a certain server. ")
         if (emoji === "✅") { 
            
 
-            promptEmbed
-            .setTitle("Heroku Dyno Help")
-            .setDescription("test")
-            m.edit(promptMessage)
-
 }
  else if (emoji === "❌") {
 
-    promptEmbed
-    .setTitle("no u")
-    .setDescription("no u")
-    m.edit(promptMessage)
+
 
         }
     });
