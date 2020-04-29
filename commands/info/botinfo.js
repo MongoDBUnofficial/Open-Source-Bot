@@ -1,7 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags")
 const { formatDate } = require("../../functions.js")
-const { djslogo } = require("../../resources/djsresourcelogo.png")
 
 module.exports = {
     name: "botinfo",
