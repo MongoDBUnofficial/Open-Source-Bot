@@ -8,6 +8,8 @@ module.exports = {
     description: "Shows the custom emoji's in the current server.",
     run: async ( client,message, args) => {
 
+        const roleColor = message.guild.me.displayHexColor;
+
         let Emojis="";
         let EmojisAnimated="";
         let EmojiCount = 0;
@@ -30,7 +32,7 @@ module.exports = {
         .setTitle(`All emojis in ${message.guild.name}.`)
         .setDescription(`**Animated: ${Animated}**:\n${EmojisAnimated}\n\n**Normal: ${EmojiCount}**:\n${Emojis}\n\n**Total: ${OverallEmojis}**`)
         .setThumbnail(message.guild.iconURL)
-        .setColor(`RANDOM`)
+        .setColor(roleColor)
         message.channel.send(Embed)
 
 
