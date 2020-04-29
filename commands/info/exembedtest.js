@@ -1,9 +1,9 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: "botinfo",
+    name: "exembedtest",
     category: "info",
-    description: "Returns with bot stats.",
+    description: "dev test",
     run: async ( client,message, args) => {
 
         const exampleEmbed = new MessageEmbed()
@@ -24,7 +24,7 @@ module.exports = {
         .setTimestamp()
         .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
     
-    channel.send(exampleEmbed);
+    message.channel.send(exampleEmbed);
 
     }
 }
