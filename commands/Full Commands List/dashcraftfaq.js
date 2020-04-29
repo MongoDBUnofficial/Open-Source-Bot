@@ -14,8 +14,8 @@ message.reply("This command is only for a certain server. ")
 
         const promptEmbed = new MessageEmbed()
         .setColor("GREEN")
-        .setAuthor(`This verification becomes invalid after 30s.`)
-        .setDescription(`Do you want to ban ${toBan}?`)
+        .setAuthor(`test`)
+        .setDescription(`pick an emoji test`)
 
     // Send the message
     await message.channel.send(promptEmbed).then(async msg => {
