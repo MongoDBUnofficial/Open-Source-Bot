@@ -12,6 +12,7 @@ module.exports = {
         const roleColor = message.guild.me.displayHexColor;
 
         const botcreated = formatDate(client.user.createdAt)
+        const joined = formatDate(client.user.joinedAt);
 
 const embed = new MessageEmbed()
 .setTitle("Bot Information")
@@ -25,6 +26,7 @@ const embed = new MessageEmbed()
     { name : 'Created At:', value : `${botcreated} `, inline: true},
 
 )
+.addField('Joined this server at:', `${joined}`, true)
 .setColor(roleColor)
 
 
