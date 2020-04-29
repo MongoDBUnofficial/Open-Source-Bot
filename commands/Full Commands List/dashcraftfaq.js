@@ -49,12 +49,10 @@ const herokuEmbed = new MessageEmbed()
 .setTitle("Heroku Help")
 .setDescription(`First, make sure your profile says
 \`\`\`Worker: node index.js\`\`\`
-**After that, do the following.**
-After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. after making sure about that,
-Click on deploy branch on bottom. it should check all of the build steps, if it didn't happened,
-means there is something wrong with your code or your setup, contact us at support and we will help you to fix it.
-Anyways, if it successfully checked everything, means your ready to use the dynos, go to recourses tab and then refresh your page or browser,
-then you should see the dyons, then follow the instructions in the video while showing up dynos.`)
+
+**Now, do the following.**
+
+After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. after making sure about that, Click on deploy branch on bottom. it should check all of the build steps, if it didn't happened, means there is something wrong with your code or your setup, contact us at support and we will help you to fix it. Anyways, if it successfully checked everything, means your ready to use the dynos, go to recourses tab and then refresh your page or browser, then you should see the dyons, then follow the instructions in the video while showing up dynos. If you still have any other problems, let us know at the support channel. Our Support team is ready out there!`)
 
 message.channel.send(herokuEmbed)
 
