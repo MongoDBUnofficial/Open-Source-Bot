@@ -24,13 +24,13 @@ const embed = new MessageEmbed()
     { name : 'Users:', value : `${client.users.cache.size} users`},
     { name : 'Servers:', value : `${client.guilds.cache.size} servers`},
     { name : 'Tag:', value : `${client.user.tag}`, inline: true},
-    { name : 'Created At:', value : `${botcreated} `},
+    { name : 'Created At:', value : `${botcreated}`, inline: true},
 
 )
 .addFields(
 
-    { name : 'Joined this server at:', value: `${joined}`, incline: true },
-    { name : 'Coded with:', value: 'Javascript (discord.js)', incline: true}, 
+    { name : 'Joined this server at:', value: `${joined}`, inline: true },
+    { name : 'Coded with:', value: 'Javascript (discord.js)', inline: true}, 
 
     )
 .setFooter("Heroku Hosting")
