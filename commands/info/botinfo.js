@@ -27,7 +27,7 @@ const embed = new MessageEmbed()
     { name : 'Created At:', value : `${botcreated} `, inline: true},
 
 )
-.addField('Joined this server at:', `${joined}`)
+.addField('Joined this server at:', `${joined}`, true)
 .setColor(roleColor)
 
 
