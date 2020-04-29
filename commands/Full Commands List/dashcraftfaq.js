@@ -51,10 +51,11 @@ const herokuEmbed = new MessageEmbed()
 \`\`\`Worker: node index.js\`\`\`
 After that, do the following.
 \`\`\`Go to Deploy and scroll to the bottom and click Deploy Branch.\`\`\`
-After that, wait a bit and then
-go to resouces and refresh until your
-dyno's are there.
-If not, get help in the Support channel.`)
+After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. after making sure about that,
+Click on deploy branch on bottom. it should check all of the build steps, if it didn't happened,
+means there is something wrong with your code or your setup, contact us at support and we will help you to fix it.
+Anyways, if it successfully checked everything, means your ready to use the dynos, go to recourses tab and then refresh your page or browser,
+then you should see the dyons, then follow the instructions in the video while showing up dynos.`)
 
 message.channel.send(herokuEmbed)
 
