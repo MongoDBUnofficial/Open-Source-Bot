@@ -24,7 +24,6 @@ const embed = new MessageEmbed()
 
 )
 .setColor(roleColor)
-.setDescription(getChoice());
 
 
 message.channel.send(embed)
