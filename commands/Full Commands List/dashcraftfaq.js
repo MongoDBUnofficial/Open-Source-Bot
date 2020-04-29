@@ -28,16 +28,18 @@ message.reply("This command is only for a certain server. ")
         if (emoji === "✅") { 
            
 
-            promptMessage.edit()
+            promptEmbed
             .setTitle("Heroku Dyno Help")
             .setDescription("test")
+            m.edit(promptMessage)
 
 }
  else if (emoji === "❌") {
 
-    m.edit(promptMessage)
+    promptEmbed
     .setTitle("no u")
     .setDescription("no u")
+    m.edit(promptMessage)
 
         }
     });
