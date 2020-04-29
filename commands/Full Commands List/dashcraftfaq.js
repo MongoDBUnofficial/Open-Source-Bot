@@ -21,7 +21,7 @@ message.reply("This command is only for a certain server. ")
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
-        const emoji = await promptMessage(msg, message.author, 30, ["✅", ":heroku:"]);
+        const emoji = await promptMessage(msg, message.author, 30, ["✅", ":heroku:705174731162255502"]);
 
         // Verification stuffs
         if (emoji === "✅") { 
