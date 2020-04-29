@@ -30,10 +30,10 @@ module.exports = {
         })
         let Embed = new MessageEmbed()
         .setTitle(`All emojis in ${message.guild.name}.`)
-        .setDescription(`**Animated: ${Animated}**:\n${EmojisAnimated}\n\n**Normal: ${EmojiCount}**:\n${Emojis}\n\n**Total: ${OverallEmojis}**`)
+        .setDescription(`**Animated: ${Animated}**:\n${EmojisAnimated}\n\n**Normal: ${EmojiCount}**:\n${Emojis}\n\n**Total: ${OverallEmojis}**`).catch(message.reply("Woah! Theres to many emoji's for me to send!"))
         .setThumbnail(message.guild.iconURL)
         .setColor(roleColor)
-        message.channel.send(Embed).catch(message.reply("Woah! Theres to many emoji's for me to send!"))
+        message.channel.send(Embed)
 
 
     }
