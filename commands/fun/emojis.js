@@ -33,7 +33,7 @@ module.exports = {
         .setDescription(`**Animated: ${Animated}**:\n${EmojisAnimated}\n\n**Normal: ${EmojiCount}**:\n${Emojis}\n\n**Total: ${OverallEmojis}**`)
         .setThumbnail(message.guild.iconURL)
         .setColor(roleColor)
-        message.channel.send(Embed)
+        message.channel.send(Embed).catch.message.reply("Woah! This server has too many emoji's!")
 
 
     }
