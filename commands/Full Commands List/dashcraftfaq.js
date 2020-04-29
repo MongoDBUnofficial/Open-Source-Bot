@@ -30,9 +30,11 @@ message.reply("This command is only for a certain server. ")
 }
  else if (emoji === "❌") {
 
-m.delete()
+message.delete()
 
-message.channel.send("testworked")
+const herokuEmbed = new MessageEmbed()
+.setTitle("Heroku Help")
+.setDescription("test")
 
         }
     });
