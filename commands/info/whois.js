@@ -8,6 +8,7 @@ module.exports = {
     usage: "c!whois [mention]",
     run: async ( client,message, args) => {
 
+        const roleColor = message.guild.me.displayHexColor;
         if (message.deletable) message.delete();
 
         const whoismember = message.mentions.users.first() || message.author;
@@ -33,11 +34,11 @@ module.exports = {
         .addField('Status', `\`\`\`${status}\`\`\``)
         .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
         .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
-        .setFooter('Say !membercommands for a list of commands.', message.guild.iconURL())
+        .setFooter(client.username, message.guild.iconURL())
         .setImage('https://cdn.discordapp.com/attachments/657250830310965259/657252699208810517/unknown.png')
         .setThumbnail(whoismember.displayAvatarURL())
         .setTimestamp()
-        .setColor(whoismember.displayHexColor === "#000000" ? "#ffffff" : whoismember.displayHexColor)
+        .setColor(roleColor)
         message.channel.send(whoisEmbed)
         return;
     }
