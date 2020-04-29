@@ -17,7 +17,7 @@ module.exports = {
 const embed = new MessageEmbed()
 .setTitle("Bot Information")
 .setAuthor(client.user.username)
-.setThumbnail(djslogo)
+.setThumbnail('https://discord.js.org/static/logo-square.png')
 .addFields(
 
     { name : 'Users:', value : `${client.users.cache.size} users`},
