@@ -24,10 +24,14 @@ const embed = new MessageEmbed()
     { name : 'Users:', value : `${client.users.cache.size} users`},
     { name : 'Servers:', value : `${client.guilds.cache.size} servers`},
     { name : 'Tag:', value : `${client.user.tag}`, inline: true},
-
+  
     { name : 'Created At:', value : `${botcreated} `, inline: true},
 
 )
+.addField(`Users: ${client.users.cache.size}
+
+Servers: ${client.guilds.cache.size}`)
+
 .addField('Joined this server at:', `${joined}`)
 .setColor(roleColor)
 
