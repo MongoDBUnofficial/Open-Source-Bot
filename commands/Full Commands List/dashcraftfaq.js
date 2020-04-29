@@ -26,7 +26,7 @@ message.reply("This command is only for a certain server. ")
         // Verification stuffs
         if (emoji === "✅") { 
            
-            message.delete()
+            msg.delete()
 
             const dashcraftEmbed = new MessageEmbed()
             .setTitle("Heroku Help")
@@ -34,11 +34,13 @@ message.reply("This command is only for a certain server. ")
 }
  else if (emoji === "❌") {
 
-message.delete()
+msg.delete()
 
 const herokuEmbed = new MessageEmbed()
 .setTitle("Heroku Help")
 .setDescription("test")
+
+message.channel.send("")
 
         }
     });
