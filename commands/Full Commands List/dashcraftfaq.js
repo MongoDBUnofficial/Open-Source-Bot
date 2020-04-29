@@ -21,7 +21,7 @@ message.reply("This command is only for a certain server. ")
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
-        const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
+        const emoji = await promptMessage(msg, message.author, 30, ["✅", ":heroku:"]);
 
         // Verification stuffs
         if (emoji === "✅") { 
@@ -29,8 +29,9 @@ message.reply("This command is only for a certain server. ")
             msg.delete()
 
             const dashcraftEmbed = new MessageEmbed()
-            .setTitle("Heroku Help")
-            .setDescription("test")
+            .setTitle("Welcome to the Dashcraft Discord Server!")
+            .addField(`Members: ${message.guild.cache.users}`)
+            .addField(`Created: ${message.guild.createdAt}`)
 
             message.channel.send(dashcraftEmbed)
 }
