@@ -22,12 +22,11 @@ const embed = new MessageEmbed()
 
     { name : 'Users:', value : `${client.users.cache.size} users`},
     { name : 'Servers:', value : `${client.guilds.cache.size} servers`},
-    { name : 'Tag:', value : `${client.user.tag}`, inline: true},
+    { name : 'Tag:', value : `${client.user.tag}`},
     { name : 'Created At:', value : `${botcreated} `, inline: true},
 
 )
-.addField('Joined this server at:', `${joined}`, true)
-.setImage('https://i.imgur.com/s9VqkIi.png')
+.addField('Joined this server at:', `${joined}`)
 .setColor(roleColor)
 
 
