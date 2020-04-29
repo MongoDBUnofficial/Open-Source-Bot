@@ -24,7 +24,7 @@ module.exports = {
             } else if (whoismember.presence.status === 'transparent'){
           status = 'Transparent';
             }
-        const whoisEmbed = new Discord.MessageEmbed()
+        const whoisEmbed = new MessageEmbed()
         .setAuthor('USER INFORMATION')
         .addField('Username', `\`\`\`${whoismember.tag}\`\`\``, true)
         .addField('User ID', `\`\`\`${whoismember.id}\`\`\``, true)
