@@ -27,9 +27,14 @@ const embed = new MessageEmbed()
     { name : 'Created At:', value : `${botcreated} `, inline: true},
 
 )
-.addField('Joined this server at:', `${joined}`)
-.setColor(roleColor)
+.addFields(
 
+    { name : 'Joined this server at:', value: `${joined}`, incline: true },
+    { name : 'Coded with:', value: 'Javascript (discord.js)', incline: true}, 
+
+    )
+.setFooter("Heroku Hosting")
+.setTimestamp()
 
 message.channel.send(embed)
 
