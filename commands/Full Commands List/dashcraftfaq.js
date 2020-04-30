@@ -86,7 +86,7 @@ message.channel.send(herokuEmbed)
                         .setTitle("How can I apply for staff?")
                         .setURL('https://docs.google.com/forms/d/e/1FAIpQLScvdl5YTSfG63eQs-YAz801uGW_nP_SIOrUWn6WTG3d4CniIg/viewform?usp=sf_link')
                         .setDescription(`Click on the hyperlink to apply.
-                        Applications Status: Open`)
+                        Applications Status: CLOSED`)
                         .setColor(roleColor)
                         
                         message.channel.send(applyEmbed)
