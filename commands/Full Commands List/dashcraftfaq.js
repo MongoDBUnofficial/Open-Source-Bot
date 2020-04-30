@@ -96,10 +96,11 @@ message.channel.send(herokuEmbed)
                                     msg.delete()
                                     
                                     const supportEmbed = new MessageEmbed()
-                                    .setTitle("How can I support Dashcraft?")
-                                    .setDescription(`You can help support Dashcraft by following the Twitter!` + 'https://twitter.com/TheDashCraft_/')
-                                    .addField("You should also subscribe!" + 'https://www.youtube.com/channel/UCGfLATfpHApnScvMr9dXd1g')
-                                    .setColor(roleColor)
+                                    .setTitle("Youtube")
+                                    .setURL('https://www.youtube.com/channel/UCGfLATfpHApnScvMr9dXd1g')
+                                    .setAuthor("Twitter",'https://i.imgur.com/P7hM7d7.png', 'https://twitter.com/TheDashCraft_/')
+                                    .setDescription(`You can help support Dashcraft by following 
+                                    the Twitter and subcribe on Yotube!`)
                                     
                                     message.channel.send(supportEmbed)
                                     
