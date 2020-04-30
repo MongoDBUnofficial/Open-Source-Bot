@@ -14,6 +14,23 @@ module.exports = {
         const botcreated = formatDate(client.user.createdAt)
         const joined = formatDate(client.user.joinedAt);
 
+
+        let ms = client.uptime
+
+        let seconds = ms / 1000;
+        ms = Math.round((seconds % 1) * 1000);
+        seconds -= (ms / 1000);
+        let minutes = seconds / 60;
+        seconds = (minutes % 1) * 60;
+        minutes -= (seconds / 60);
+        let hours = minutes / 60;
+        minutes = (hours % 1) * 60;
+        hours -= (minutes / 60);
+        let time = minutes+":"+seconds+"."+ms;
+        time = hours += ":" + moment(time, "mm:ss.SSS").format("mm:ss.SSS");
+
+
+
 const embed = new MessageEmbed()
 .setTitle("Bot Information")
 .setURL('https://discordapp.com/api/oauth2/authorize?client_id=697963363476570142&permissions=8&scope=bot')
@@ -31,8 +48,8 @@ const embed = new MessageEmbed()
 
     { name : 'Joined this server at:', value: `\`\`\`${joined}\`\`\``, inline: true },
     { name : 'Coded with:', value: `\`\`\`Javascript (discord.js)\`\`\``, inline: true}, 
-    { name : 'Support Server:', value: `\`\`\`https://discord.gg/Y5muae4\`\`\``, inline: true}, 
-    { name : '', value: 'https://discord.gg/Y5muae4', inline: true}, 
+    { name : 'Support Server:', value: `\`\`\`Y5muae4\`\`\``, inline: true}, 
+    { name : 'Uptime:', value: `\`\`\`${time}\`\`\``, inline: true}, 
 
     )
 .setFooter("Heroku Hosting")
