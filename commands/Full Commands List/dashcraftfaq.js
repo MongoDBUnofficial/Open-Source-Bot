@@ -19,7 +19,7 @@ message.reply("This command is only for a certain server. ")
         .setThumbnail('https://i.imgur.com/n7iYhCD.png')
         .addFields(
             { name: "Who is DashCraft?", value: "🎟", inline: true},
-            { name: "What is this Discord server for?", value: "🏴", inline: true},
+            { name: "What is this Discord server for?", value: "⬜", inline: true},
             { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true},
             { name: "How can I apply for staff?", value: "🦺", inline: true},
         )
@@ -30,7 +30,7 @@ message.reply("This command is only for a certain server. ")
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
-        const emoji = await promptMessage(msg, message.author, 30, ["🎟", "🟪", "🦺", "🏴"]);
+        const emoji = await promptMessage(msg, message.author, 30, ["🎟", "🟪", "🦺", "⬜"]);
 
         // Verification stuffs
         if (emoji === "🎟") { 
@@ -62,7 +62,7 @@ After that, go to deploy tab on Heroku, scroll down and make sure automatic depl
 message.channel.send(herokuEmbed)
 
         }
-        else if (emoji === "🏴") {
+        else if (emoji === "⬜") {
 
             msg.delete()
             
