@@ -30,8 +30,8 @@ const embed = new MessageEmbed()
 .addFields(
 
     { name : 'Joined this server at:', value: `\`\`\`${joined}\`\`\``, inline: true },
-    { name : 'Coded with:', value: '```Javascript (discord.js)```', inline: true}, 
-    { name : 'Support Server:', value: '```https://discord.gg/Y5muae4```', inline: true}, 
+    { name : 'Coded with:', value: `\`\`\`Javascript (discord.js)\`\`\``, inline: true}, 
+    { name : 'Support Server:', value: `\`\`\`https://discord.gg/Y5muae4\`\`\``, inline: true}, 
     { name : '', value: 'https://discord.gg/Y5muae4', inline: true}, 
 
     )
