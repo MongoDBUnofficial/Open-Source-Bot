@@ -17,15 +17,14 @@ message.reply("This command is only for a certain server. ")
         const promptEmbed = new MessageEmbed()
         .setTitle("Dashcraft FAQ")
         .setThumbnail(message.guild.iconURL)
-        .addField(`**Select an emoji from the key
-        for more information about it.**`)
         .addFields(
             { name: "Who is DashCraft?", value: "🎟", inline: true},
             { name: "What is this Discord server for?", value: "🦺", inline: true},
             { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true},
         )
         .setColor(roleColor)
-        .setDescription(`pick an emoji test`)
+        .setDescription(`**Select an emoji from the key
+        for more information about it.**`)
 
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
