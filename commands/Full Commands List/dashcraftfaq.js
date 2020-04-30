@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags")
-const { formatDate, promptMessage } = require("../functions.js")
+const { formatDate, promptMessage } = require("../../functions.js")
 
 module.exports = {
     name: "dashcraftfaq",
