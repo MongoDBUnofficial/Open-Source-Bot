@@ -18,10 +18,11 @@ message.reply("This command is only for a certain server. ")
         .setTitle("Dashcraft FAQ")
         .setThumbnail('https://i.imgur.com/n7iYhCD.png')
         .addFields(
-            { name: "Who is DashCraft?", value: "🎟", inline: true},
-            { name: "What is this Discord server for?", value: "⬜", inline: true},
-            { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true},
-            { name: "How can I apply for staff?", value: "🦺", inline: true},
+            { name: "Who is DashCraft?", value: "🎟", inline: true },
+            { name: "What is this Discord server for?", value: "⬜", inline: true },
+            { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true },
+            { name: "How can I apply for staff?", value: "🦺", inline: true },
+            { name: "How can I support Dashcraft?", value: "🐦", inline: true }
         )
         .setColor(roleColor)
         .setDescription(`**Select an emoji from the key
@@ -30,7 +31,7 @@ message.reply("This command is only for a certain server. ")
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
-        const emoji = await promptMessage(msg, message.author, 30, ["🎟", "🟪", "🦺", "⬜"]);
+        const emoji = await promptMessage(msg, message.author, 30, ["🎟", "🟪", "🦺", "⬜","🐦"]);
 
         // Verification stuffs
         if (emoji === "🎟") { 
@@ -90,6 +91,19 @@ message.channel.send(herokuEmbed)
                         message.channel.send(applyEmbed)
                         
                                 }
+                                else if (emoji === "🐦") {
+
+                                    msg.delete()
+                                    
+                                    const supportEmbed = new MessageEmbed()
+                                    .setTitle("How can I support Dashcraft?")
+                                    .setDescription(`You can help support Dashcraft by following the Twitter!` + 'https://twitter.com/TheDashCraft_/')
+                                    .addField("You should also subscribe!" + 'https://www.youtube.com/channel/UCGfLATfpHApnScvMr9dXd1g')
+                                    .setColor(roleColor)
+                                    
+                                    message.channel.send(supportEmbed)
+                                    
+                                            }
     });
      
     }
