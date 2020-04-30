@@ -16,11 +16,12 @@ message.reply("This command is only for a certain server. ")
 
         const promptEmbed = new MessageEmbed()
         .setTitle("Dashcraft FAQ")
-        .setThumbnail(message.guild.iconURL)
+        .setThumbnail('https://i.imgur.com/n7iYhCD.png')
         .addFields(
             { name: "Who is DashCraft?", value: "🎟", inline: true},
-            { name: "What is this Discord server for?", value: "🦺", inline: true},
+            { name: "What is this Discord server for?", value: "🏴", inline: true},
             { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true},
+            { name: "How can I apply for staff?", value: "🦺", inline: true},
         )
         .setColor(roleColor)
         .setDescription(`**Select an emoji from the key
@@ -29,7 +30,7 @@ message.reply("This command is only for a certain server. ")
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
-        const emoji = await promptMessage(msg, message.author, 30, ["🎟", "🟪", "🦺"]);
+        const emoji = await promptMessage(msg, message.author, 30, ["🎟", "🟪", "🦺", "🏴"]);
 
         // Verification stuffs
         if (emoji === "🎟") { 
@@ -61,7 +62,7 @@ After that, go to deploy tab on Heroku, scroll down and make sure automatic depl
 message.channel.send(herokuEmbed)
 
         }
-        else if (emoji === "🦺") {
+        else if (emoji === "🏴") {
 
             msg.delete()
             
@@ -75,6 +76,20 @@ message.channel.send(herokuEmbed)
             message.channel.send(herokuEmbed)
             
                     }
+                    else if (emoji === "🦺") {
+
+                        msg.delete()
+                        
+                        const applyEmbed = new MessageEmbed()
+                        .setTitle("How can I apply for staff?")
+                        .setURL('https://docs.google.com/forms/d/e/1FAIpQLScvdl5YTSfG63eQs-YAz801uGW_nP_SIOrUWn6WTG3d4CniIg/viewform?usp=sf_link')
+                        .setDescription(`Click on the hyperlink to apply.
+                        Applications Status: Open`)
+                        .setColor(roleColor)
+                        
+                        message.channel.send(herokuEmbed)
+                        
+                                }
     });
      
     }
