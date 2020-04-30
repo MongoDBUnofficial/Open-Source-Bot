@@ -58,7 +58,8 @@ const herokuEmbed = new MessageEmbed()
 
 **Now, do the following.**
 
-After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. After making sure about that, Click on deploy branch on bottom. It should check all of the build steps, if it didn't happenen, it means there is something wrong with your code or your setup, contact us at support and we will help you to fix it. If it successfully checked everything, it means your ready to use the dynos, go to recourses tab and then refresh your page or browser, then you should see the dyons, then follow the instructions in the video while showing up dynos. If you still have any other problems, let us know at the support channel. Our Support team is ready out there!`)
+After that, go to deploy tab on Heroku, scroll down and make sure automatic deploy is on. After making sure about that, Click on deploy branch on bottom. It should check all of the build steps, if it didn't happenen, it means there is something wrong with your code or your setup, contact us at support and we will help you to fix it. If it successfully checked everything, it means your ready to use the dynos, go to recourses tab and then refresh your page or browser, then you should see the dyons, then follow the instructions in the video while showing up dynos. If you still have any other problems, let us know at the support channel. Our Support team is ready out there!
+**NOTE: Make sure your Procfile isn't any type of file, it should just say in File Explorer, Type: File.**`)
 
 message.channel.send(herokuEmbed)
 
