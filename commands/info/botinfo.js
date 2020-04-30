@@ -21,20 +21,23 @@ const embed = new MessageEmbed()
 .setThumbnail('https://discord.js.org/static/logo-square.png')
 .addFields(
 
-    { name : 'Users:', value : `${client.users.cache.size} users`},
-    { name : 'Servers:', value : `${client.guilds.cache.size} servers`},
-    { name : 'Tag:', value : `${client.user.tag}`, inline: true},
-    { name : 'Created At:', value : `${botcreated}`, inline: true},
+    { name : 'Users:', value : `\`\`\`${client.users.cache.size} users\`\`\``},
+    { name : 'Servers:', value : `\`\`\`${client.guilds.cache.size} servers\`\`\``},
+    { name : 'Tag:', value : `\`\`\`${client.user.tag}\`\`\``, inline: true},
+    { name : 'Created At:', value : `\`\`\`${botcreated}\`\`\``, inline: true},
 
 )
 .addFields(
 
-    { name : 'Joined this server at:', value: `${joined}`, inline: true },
-    { name : 'Coded with:', value: 'Javascript (discord.js)', inline: true}, 
+    { name : 'Joined this server at:', value: `\`\`\`${joined}\`\`\``, inline: true },
+    { name : 'Coded with:', value: '```Javascript (discord.js)```', inline: true}, 
+    { name : 'Support Server:', value: '```https://discord.gg/Y5muae4```', inline: true}, 
+    { name : '', value: 'https://discord.gg/Y5muae4', inline: true}, 
 
     )
 .setFooter("Heroku Hosting")
 .setTimestamp()
+.setImage('https://cdn.discordapp.com/attachments/657250830310965259/657252699208810517/unknown.png')
 
 message.channel.send(embed)
 
