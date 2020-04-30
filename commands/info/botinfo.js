@@ -40,16 +40,16 @@ const embed = new MessageEmbed()
 
     { name : 'Users:', value : `\`\`\`${client.users.cache.size} users\`\`\``},
     { name : 'Servers:', value : `\`\`\`${client.guilds.cache.size} servers\`\`\``},
-    { name : 'Tag:', value : `\`\`\`${client.user.tag}\`\`\``, inline: true},
-    { name : 'Created At:', value : `\`\`\`${botcreated}\`\`\``, inline: true},
+    { name : 'Tag:', value : `\`\`\`${client.user.tag}\`\`\``},
+    { name : 'Created At:', value : `\`\`\`${botcreated}\`\`\``},
 
 )
 .addFields(
 
     { name : 'Joined this server at:', value: `\`\`\`${joined}\`\`\``, inline: true },
     { name : 'Coded with:', value: `\`\`\`Javascript (discord.js)\`\`\``, inline: true}, 
-    { name : 'Support Server:', value: `\`\`\`Y5muae4\`\`\``, inline: true}, 
-    { name : 'Uptime:', value: `\`\`\`${time}\`\`\``, inline: true}, 
+    { name : 'Support Server:', value: `\`\`\`Y5muae4\`\`\``}, 
+    { name : 'Uptime:', value: `\`\`\`${time}\`\`\``}, 
 
     )
 .setFooter("Heroku Hosting")
