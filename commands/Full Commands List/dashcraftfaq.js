@@ -100,7 +100,7 @@ message.channel.send(herokuEmbed)
                                     .setURL('https://www.youtube.com/channel/UCGfLATfpHApnScvMr9dXd1g')
                                     .setAuthor("Twitter",'https://i.imgur.com/P7hM7d7.png', 'https://twitter.com/TheDashCraft_/')
                                     .setDescription(`You can help support Dashcraft by following 
-                                    the Twitter and subcribe on Yotube!`)
+                                    the Twitter and subcribe on Youtube!`)
                                     
                                     message.channel.send(supportEmbed)
                                     
