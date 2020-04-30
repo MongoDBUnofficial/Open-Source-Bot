@@ -12,6 +12,8 @@ message.reply("This command is only for a certain server. ")
  return;
         }
 
+        const roleColor = message.guild.me.displayHexColor;
+
         const promptEmbed = new MessageEmbed()
         .setTitle("Dashcraft FAQ")
         .setThumbnail(message.guild.iconURL)
@@ -22,7 +24,7 @@ message.reply("This command is only for a certain server. ")
             { name: "What is this Discord server for?", value: "🦺", inline: true},
             { name: "My Heroku isn't working. How do I fix it?", value: "🟪", inline: true},
         )
-        .setColor("GREEN")
+        .setColor(roleColor)
         .setDescription(`pick an emoji test`)
 
     // Send the message
@@ -38,6 +40,7 @@ message.reply("This command is only for a certain server. ")
             const dashcraftEmbed = new MessageEmbed()
             .setTitle("Who is DashCraft?")
             .setDescription("Dashcraft, or Poryafm12¹ on Discord is the creator of http://youtube.com/dashcraft123")
+            .setColor(roleColor)
 
             message.channel.send(dashcraftEmbed)
 }
@@ -47,6 +50,7 @@ msg.delete()
 
 const herokuEmbed = new MessageEmbed()
 .setTitle("Heroku Help")
+.setColor(roleColor)
 .setDescription(`First, make sure your profile says
 \`\`\`Worker: node index.js\`\`\`
 **Note: index.js is known as default bot file (as it mentioned in the video), but if your main bot file name is anything else, replace index.js to your main bot file. for example if my main bot file name is bot.js, I will put this as my Procfile: \`Worker: node bot.js\`**
@@ -67,6 +71,7 @@ message.channel.send(herokuEmbed)
             .setDescription(`This server is for you to get
             help with your code and the official chat server
             for the DashCraft YouTube channel.`)
+            .setColor(roleColor)
             
             message.channel.send(herokuEmbed)
             
