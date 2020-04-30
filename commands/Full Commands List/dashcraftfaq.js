@@ -87,7 +87,7 @@ message.channel.send(herokuEmbed)
                         Applications Status: Open`)
                         .setColor(roleColor)
                         
-                        message.channel.send(herokuEmbed)
+                        message.channel.send(applyEmbed)
                         
                                 }
     });
