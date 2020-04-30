@@ -1,3 +1,5 @@
+const { GuildMemberRoleManager } = require("discord.js");
+
 module.exports = {
     name: "addroletest",
     category: "info",
