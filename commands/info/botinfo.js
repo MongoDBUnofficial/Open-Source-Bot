@@ -1,6 +1,6 @@
-const { MessageEmbed } = require('discord.js');
-const { stripIndents } = require("common-tags")
-const { formatDate } = require("../../functions.js")
+const { getMember, formatDate } = require("../../functions.js")
+const { MessageEmbed } = require("discord.js");
+const moment = require("moment");
 
 module.exports = {
     name: "botinfo",
