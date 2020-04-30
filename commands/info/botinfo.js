@@ -38,17 +38,17 @@ const embed = new MessageEmbed()
 .setThumbnail('https://discord.js.org/static/logo-square.png')
 .addFields(
 
-    { name : 'Users:', value : `\`\`\`${client.users.cache.size} users\`\`\``},
-    { name : 'Servers:', value : `\`\`\`${client.guilds.cache.size} servers\`\`\``, inline: true},
-    { name : 'Tag:', value : `\`\`\`${client.user.tag}\`\`\``, inline: true},
+    { name : 'Users:', value : `\`\`\`${client.users.cache.size} users\`\`\``, inline: true},
+    { name : 'Servers:', value : `\`\`\`${client.guilds.cache.size} servers\`\`\``, inline: true },
+    { name : 'Tag:', value : `\`\`\`${client.user.tag}\`\`\``},
     { name : 'Created At:', value : `\`\`\`${botcreated}\`\`\``},
 
 )
 .addFields(
 
-    { name : 'Joined this server at:', value: `\`\`\`${joined}\`\`\``  },
-    { name : 'Coded with:', value: `\`\`\`Javascript (discord.js)\`\`\``, inline: true}, 
-    { name : 'Support Server:', value: `\`\`\`Y5muae4\`\`\``, inline: true}, 
+    { name : 'Joined this server at:', value: `\`\`\`${joined}\`\`\``, inline: true  },
+    { name : 'Support Server:', value: `\`\`\`Y5muae4\`\`\``, inline: true},
+    { name : 'Coded with:', value: `\`\`\`Javascript (discord.js)\`\`\``}, 
     { name : 'Uptime:', value: `\`\`\`${time}\`\`\``}, 
 
     )
