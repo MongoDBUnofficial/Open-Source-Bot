@@ -52,6 +52,7 @@ client.on("message", async message => {
     
     const prefix = "c!";
 
+    if(message.channel.type === "dm") return;
     if (message.author.bot) return;
     if (!message.guild) return;
     if (!message.content.startsWith(prefix)) return;
@@ -74,6 +75,8 @@ client.on("message", async message => {
 
 //reply prefix to mention
 client.on('message', message => {
+     if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
     const roleColor = message.guild.me.displayHexColor;
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
