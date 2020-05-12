@@ -10,7 +10,6 @@ module.exports = {
 
         m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. WS Latency is ${Math.round(client.ws.ping)}ms`);
 
-        message.channel.send(embed)
         
     }
 
