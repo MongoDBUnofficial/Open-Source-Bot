@@ -25,7 +25,7 @@ return message.channel.send("Please announce something!").then(msg => msg.delete
 const channel = message.guild.channels.cache.find(channel => channel.name === "announcements");
 
 if (!channel)
-return message.channel.send("You need an announcements channel to report with this bot! Create a channel named announcements.")
+return message.channel.send("You need an announcements channel to announce with this bot! Create a channel named announcements.")
 
 const embed = new MessageEmbed()
 .setColor(roleColor)
@@ -36,7 +36,7 @@ const embed = new MessageEmbed()
 
 channel.send(embed)
 
-message.reply("Announcement made by user: " + message.author.username )
+message.channel.send("Announcement made by user: " + message.author.username )
 
     }
 
