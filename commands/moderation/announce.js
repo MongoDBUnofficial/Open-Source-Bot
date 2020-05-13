@@ -32,7 +32,7 @@ const embed = new MessageEmbed()
 .setTimestamp()
 .setFooter(message.guild.name, message.guild.iconURL)
 .setAuthor(message.author.username , message.author.displayAvatarURL)
-.setDescription(`${args.slice(1).join(" ")}`)
+.setDescription(`${args.slice().join(" ")}`)
 
 channel.send(embed)
 
