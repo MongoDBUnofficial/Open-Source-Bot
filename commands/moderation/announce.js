@@ -30,7 +30,7 @@ return message.channel.send("You need an announcements channel to announce with 
 const embed = new MessageEmbed()
 .setColor(roleColor)
 .setTimestamp()
-.setFooter(message.guild.name, message.guild.iconURL)
+.setFooter(message.guild.name, message.guild.me.iconURL)
 .setAuthor(message.author.username , message.author.displayAvatarURL)
 .setDescription(`${args.slice().join(" ")}`)
 
@@ -40,4 +40,4 @@ message.channel.send("Announcement made by user: " + message.author.username )
 
     }
 
-}   
+}  
