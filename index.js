@@ -77,9 +77,10 @@ client.on("message", async message => {
 client.on('message', message => {
      if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    const roleColor = message.guild.me.displayHexColor;
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
+    
+    const roleColor = message.guild.me.displayHexColor;
 
     if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto [BETA]#4963") {
 
