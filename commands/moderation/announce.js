@@ -12,7 +12,9 @@ module.exports = {
 
         const roleColor = message.guild.me.displayHexColor;
 
-if (!message.author.hasPermission("MANAGE_MESSAGES")) 
+        let sMember = message.author
+
+if (!sMember.hasPermission("MANAGE_MESSAGES")) 
   return  message.reply("You don't have permissions to announce!").then(msg => msg.delete({ timeout: 3000})) 
 
 
