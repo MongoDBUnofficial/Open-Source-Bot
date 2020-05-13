@@ -34,8 +34,7 @@ const embed = new MessageEmbed()
 .setAuthor(message.author.username , message.author.displayAvatarURL)
 .setDescription(`${args.slice().join(" ")}`)
 
-channel.send('@everyone')
-channel.send(embed)
+channel.send(`@everyone ${embed}`)
 
 message.channel.send("Announcement made by user: " + message.author.username )
 
