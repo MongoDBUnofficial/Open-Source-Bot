@@ -29,8 +29,8 @@ return message.channel.send("This server isn't set up correctly for reports, ple
 const embed = new MessageEmbed()
 .setColor("#ff0000")
 .setTimestamp()
-.setFooter(message.guild.name, message.guild.iconURL)
-.setAuthor("Reported member", rMember.user.displayAvatarURL)
+.setFooter(message.guild.name, message.guild.iconURL())
+.setAuthor("Reported member", rMember.user.displayAvatarURL())
 .setDescription(    `**> Reported Member:** ${rMember}
 **> Reported by:** ${message.member} (${message.member.id})
 **> Reported in:** ${message.channel}
