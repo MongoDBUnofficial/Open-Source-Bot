@@ -22,7 +22,7 @@ if (!message.member.hasPermission("MANAGE_MESSAGES"))
 if (!args[1])
 return message.channel.send("Please announce something!").then(msg => msg.delete({ timeout: 3000}))
 
-const channel = message.guild.channels.cache.find(channel => channel.name === "announcements");
+const channel = message.guild.channels.cache.find(channel => channel.name === "notice");
 
 if (!channel)
 return message.channel.send("You need an announcements channel to announce with this bot! Create a channel named announcements.")
