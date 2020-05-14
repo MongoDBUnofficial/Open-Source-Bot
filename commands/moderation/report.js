@@ -32,7 +32,7 @@ const embed = new MessageEmbed()
 .setFooter(message.guild.name, message.guild.iconURL())
 .setAuthor("Reported member", rMember.user.displayAvatarURL())
 .setDescription(    `**Reported Member:** 
-${rMember.tag}
+${rMember} (${rMember.id})
 **Reported by:
 **${message.member} (${message.member.id})
 **Reported in:**
