@@ -31,7 +31,7 @@ const embed = new MessageEmbed()
 .setTimestamp()
 .setFooter(message.guild.name, message.guild.iconURL())
 .setAuthor("Reported member", rMember.user.displayAvatarURL())
-.setDescription(    `**Reported Member:** \`${rMember}\`
+.setDescription(    `**Reported Member:** \`\`\`${rMember.tag}\`\`\`
 **Reported by:** \`\`\`${message.member} (${message.member.id})\`\`\`
 **Reported in:** \`\`\`${message.channel}\`\`\`
 **Reason:** \`\`\`${args.slice(1).join(" ")}\`\`\``)
