@@ -22,7 +22,7 @@ if (!message.member.hasPermission("MANAGE_MESSAGES"))
 if (!args[1])
 return message.channel.send("Please announce something!").then(msg => msg.delete({ timeout: 3000}))
 
-const channel = message.guild.channels.cache.find(channel => channel.name === "announcements" || "main-announcements" || "notice-board");
+const channel = message.guild.channels.cache.find(channel => channel.name === "announcements");
 
 if (!channel)
 return message.channel.send("You need an announcements channel to announce with this bot! Create a channel named announcements.")
@@ -30,8 +30,8 @@ return message.channel.send("You need an announcements channel to announce with 
 const embed = new MessageEmbed()
 .setColor(roleColor)
 .setTimestamp()
-.setFooter(message.guild.name, message.guild.iconURL)
-.setAuthor(message.author.username , message.author.displayAvatarURL)
+.setFooter(message.guild.name, message.guild.iconURL())
+.setAuthor(message.author.username , message.author.displayAvatarURL())
 .setDescription(`${args.slice().join(" ")}`)
 
 channel.send(`@everyone`, embed)
