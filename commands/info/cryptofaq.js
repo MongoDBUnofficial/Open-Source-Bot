@@ -23,6 +23,7 @@ module.exports = {
         .setColor(roleColor)
         .setDescription(`**Select an emoji from the key
         for more information about it.**`)
+        .setFooter('This prompt will expire in 30 seconds.')
 
  
     const m = await message.channel.send(promptEmbed).then(async msg =>{
