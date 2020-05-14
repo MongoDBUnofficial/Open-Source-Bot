@@ -17,7 +17,7 @@ module.exports = {
         const roleColor = message.guild.me.displayHexColor;
 
         const promptEmbed = new MessageEmbed()
-        .setTitle("Dashcraft FAQ")
+        .setTitle("Crypto FAQ")
         .setThumbnail(client.user.displayAvatarURL())
         .addFields(
             { name: "What is Crypto?", value: "⁉", inline: true },
@@ -30,12 +30,12 @@ module.exports = {
         .setDescription(`**Select an emoji from the key
         for more information about it.**`)
 
-    // Send the message
+ 
     const m = await message.channel.send(promptEmbed).then(async msg =>{
-        // Await the reactions and the reactioncollector
+        
         const emoji = await promptMessage(msg, message.author, 30, ["⁉", "🦺", "🎟", "🏗","🎉"]);
 
-        // Verification stuffs
+        
         if (emoji === "⁉") { 
            
             msg.delete()
