@@ -2,9 +2,9 @@ const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags")
 
 module.exports = {
-    name: "announce",
+    name: "notice",
     category: "moderation",
-    description: "If the server has a channel correctly named 'Announcements' the bot will announce what the user says.",
+    description: "If the server has a channel correctly named 'notice-board' it will send what the user said in an embed, very similar to the announce command.",
     usage: "c!announce <your message> (CAN INCLUDE MULTIPLE LINES WITH SHIFT + ENTER AND SUPPORTS MARKDOWN)",
     run: async ( client,message, args) => {
 
@@ -30,11 +30,12 @@ return message.channel.send("You need an announcements channel to announce with 
 const embed = new MessageEmbed()
 .setColor(roleColor)
 .setTimestamp()
+.setTitle("Notice")
 .setFooter(message.guild.name, message.guild.iconURL())
 .setAuthor(message.author.username , message.author.displayAvatarURL())
 .setDescription(`${args.slice().join(" ")}`)
 
-channel.send(`@everyone`, embed)
+channel.send(`@here`, embed)
 
 message.channel.send("Announcement made by user: " + message.author.username )
 

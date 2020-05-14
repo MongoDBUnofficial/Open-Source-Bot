@@ -79,6 +79,9 @@ client.on('message', message => {
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
+    if(!client.hasPermission("SEND_MESSAGES")) {
+        console.log("some doofus didnt allow the bot to talk lol")
+    }
     
     const roleColor = message.guild.me.displayHexColor;
 
