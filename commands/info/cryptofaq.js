@@ -22,7 +22,7 @@ module.exports = {
         .addFields(
             { name: "What is Crypto?", value: "⁉", inline: true },
             { name: "Where can I get support or suggest something?", value: "🦺", inline: true },
-            { name: "How can I get the PRO version?", value: "🎩", inline: true },
+            { name: "How can I get the PRO version?", value: "🎟", inline: true },
             { name: "Why is the bot in BETA?", value: "🏗", inline: true },
             { name: "How can I support Crypto?", value: "🎉", inline: true }
         )
@@ -33,7 +33,7 @@ module.exports = {
     // Send the message
     const m = await message.channel.send(promptEmbed).then(async msg =>{
         // Await the reactions and the reactioncollector
-        const emoji = await promptMessage(msg, message.author, 30, ["⁉", "🦺", "🎩", "🏗","🎉"]);
+        const emoji = await promptMessage(msg, message.author, 30, ["⁉", "🦺", "🎟", "🏗","🎉"]);
 
         // Verification stuffs
         if (emoji === "⁉") { 
@@ -60,7 +60,7 @@ const supportEmbed = new MessageEmbed()
 message.channel.send(supportEmbed)
 
         }
-        else if (emoji === "🎩") {
+        else if (emoji === "🎟") {
 
             msg.delete()
             
