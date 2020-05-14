@@ -18,7 +18,7 @@ module.exports = {
 
         const promptEmbed = new MessageEmbed()
         .setTitle("Dashcraft FAQ")
-        .setThumbnail('https://i.imgur.com/n7iYhCD.png')
+        .setThumbnail(client.user.displayAvatarURL())
         .addFields(
             { name: "What is Crypto?", value: "⁉", inline: true },
             { name: "Where can I get support or suggest something?", value: "🦺", inline: true },
