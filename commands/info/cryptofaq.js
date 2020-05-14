@@ -4,6 +4,7 @@ const { formatDate, promptMessage } = require("../../functions.js")
 
 module.exports = {
     name: "cryptofaq",
+    category: "info",
     description: "A FAQ For the bot.",
     run: async ( client,message, args) => {
 
