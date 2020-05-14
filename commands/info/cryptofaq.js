@@ -8,12 +8,6 @@ module.exports = {
     description: "A FAQ For the bot.",
     run: async ( client,message, args) => {
 
-        if(message.author.id !== '283313169567318016') {
-
-            message.reply("This command is developer only.")
-             return;
-                    }        
-
         const roleColor = message.guild.me.displayHexColor;
 
         const promptEmbed = new MessageEmbed()
