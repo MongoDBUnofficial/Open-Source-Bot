@@ -1,0 +1,11 @@
+     
+
+ONLY A CERTAIN GUILD CAN USE -
+
+   if(message.guild.id !== '697964996554129408') {
+
+            message.reply("This command is only for a certain server. ")
+             return;
+                    }       
+
+ONLY A CERTAIN USER CAN USE -
