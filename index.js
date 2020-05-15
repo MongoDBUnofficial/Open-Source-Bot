@@ -79,7 +79,7 @@ client.on('message', message => {
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    if(!client.member.hasPermission("SEND_MESSAGES")) {
+    if(!client.user.hasPermission("SEND_MESSAGES")) {
         console.log("some doofus didnt allow the bot to talk lol")
     }
     
