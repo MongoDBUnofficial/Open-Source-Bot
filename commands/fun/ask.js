@@ -33,6 +33,7 @@ return message.channel.send("Please ask something!").then(msg => msg.delete({ ti
                const embed = new MessageEmbed()
                .setTitle(args.slice().join(" "))
                .setDescription(reply)
+               .setColor("RANDOM")
 
                message.channel.send(embed)
 
