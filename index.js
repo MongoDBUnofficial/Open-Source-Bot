@@ -86,7 +86,9 @@ client.on('message', message => {
      if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
+    const clientPerms = message.channel.permissionsFor(message.client.user)
 
+    if(!clientPerms.has("SEND_MESSAGES")) return;
 
     if(message.author.bot) return;
     
