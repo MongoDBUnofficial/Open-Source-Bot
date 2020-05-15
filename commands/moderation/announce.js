@@ -16,16 +16,11 @@ module.exports = {
 if (!message.member.hasPermission("MANAGE_MESSAGES")) 
   return  message.reply("You don't have permissions to announce!").then(msg => msg.delete({ timeout: 3000})) 
 
-
-
-
 if (!args[1])
 return message.channel.send("Please announce something!").then(msg => msg.delete({ timeout: 3000}))
 
-const channel = message.guild.channels.cache.find(channel => channel.name === "announcements");
-
-if (!channel)
-return message.channel.send("You need an announcements channel to announce with this bot! Create a channel named announcements.")
+let sendchannel = message.mentions.channels.first()
+if(!sendchannel) return message.channel.send(`I could not find that channel in the guild!`)
 
 const embed = new MessageEmbed()
 .setColor(roleColor)
@@ -34,9 +29,10 @@ const embed = new MessageEmbed()
 .setAuthor(message.author.username , message.author.displayAvatarURL())
 .setDescription(`${args.slice().join(" ")}`)
 
-channel.send(`@everyone`, embed)
+sendchannel.send(`@everyone`, embed)
 
-message.channel.send("Announcement made by user: " + message.author.username )
+message.channel.send(`Announcement made by user: ${message.author.username}
+In: ${sendchannel}`)
 
     }
 
