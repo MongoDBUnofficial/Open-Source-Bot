@@ -53,6 +53,11 @@ client.on("message", async message => {
     const prefix = "c!";
 
     if(message.channel.type === "dm") return;
+
+    const clientPerms = message.channel.permissionsFor(message.client.user)
+
+    if(!clientPerms.has("SEND_MESSAGES")) return;
+
     if (message.author.bot) return;
     if (!message.guild) return;
     if (!message.content.startsWith(prefix)) return;
