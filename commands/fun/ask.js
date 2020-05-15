@@ -28,7 +28,7 @@ return message.channel.send("Please ask something!").then(msg => msg.delete({ ti
            ];
            
            
-               let reply = statuses[Math.floor(Math.random() * replies.length)];
+               let reply = replies[Math.floor(Math.random() * replies.length)];
 
                const embed = new MessageEmbed()
                .setTitle(args.slice().join(" "))
