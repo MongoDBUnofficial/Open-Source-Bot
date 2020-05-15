@@ -19,8 +19,6 @@ if (!message.member.hasPermission("MANAGE_MESSAGES"))
 if (!args[1])
 return message.channel.send("Please announce something!").then(msg => msg.delete({ timeout: 3000}))
 
-if(!args[0].startsWith("#")) return message.channel.send(`You did not use the correct formatting for the channel!`)
-
 let sendchannel = message.mentions.channels.first()
 if(!sendchannel) return message.channel.send(`I could not find that channel in the guild!`)
 
