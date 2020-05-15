@@ -34,6 +34,7 @@ return message.channel.send("Please ask something!").then(msg => msg.delete({ ti
                .setTitle(args.slice().join(" "))
                .setDescription(reply)
 
+               message.channel.send(embed)
 
 
     }
