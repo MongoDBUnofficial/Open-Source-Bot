@@ -19,7 +19,7 @@ if (!message.member.hasPermission("MANAGE_MESSAGES"))
 if (!args[1])
 return message.channel.send("Please announce something!").then(msg => msg.delete({ timeout: 3000}))
 
-let sendchannel = message.mentions.channels.first()
+let sendchannel = message.mentions.channels.args.slice(1)
 if(!sendchannel) return message.channel.send(`I could not find that channel in the guild!`)
 
 const embed = new MessageEmbed()
