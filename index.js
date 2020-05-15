@@ -75,13 +75,17 @@ client.on("message", async message => {
 
 //reply prefix to mention
 client.on('message', message => {
+
+    
+
      if(message.author.bot) return;
     if(message.channel.type === "dm") return;
+
+    const clientPerms = message.channel.permissionsFor(message.guild.me)
+
+    if(!clientPerms.has("SEND_MESSAGES")) return;
+
     if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-    if(!client.user.hasPermission("SEND_MESSAGES")) {
-        console.log("some doofus didnt allow the bot to talk lol")
-    }
     
     const roleColor = message.guild.me.displayHexColor;
 
