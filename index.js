@@ -83,7 +83,7 @@ client.on('message', message => {
 
     const clientPerms = message.channel.permissionsFor(message.client.me)
 
-    if(!clientPerms.has("SEND_MESSAGES")) return;
+    if(!clientPerms.hasPermission("SEND_MESSAGES")) return;
 
     if(message.author.bot) return;
     
