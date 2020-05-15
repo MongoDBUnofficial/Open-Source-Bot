@@ -39,7 +39,6 @@ if(message.content.toLowerCase().startsWith("c!clear infinity")) {
         }
 
         message.channel.bulkDelete(deleteAmount, true)
-            .then(deleted => message.channel.send(`Deleted ${deleted.size} messages.`))
-            .catch(err => message.reply(`There was an error deleting those messages. ${err} Please contact the developer by joining this server https://discord.gg/69QAACN.`));
+            .then(deleted => message.channel.send(`Deleted ${deleted.size} messages.`)).then(m => m.delete(5000));
     }
 }
