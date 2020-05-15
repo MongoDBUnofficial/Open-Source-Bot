@@ -8,6 +8,10 @@ module.exports = {
     usage: "c!help [command]",
     run: async ( client,message, args) => {
 
+        const clientPerms = message.channel.permissionsFor(message.client.me)
+
+        if(!clientPerms.has("SEND_MESSAGES")) return;
+
         if (message.deletable) message.delete(); 
     
 if(args[0]) {
