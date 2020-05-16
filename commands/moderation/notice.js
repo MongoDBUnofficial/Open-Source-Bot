@@ -16,16 +16,18 @@ module.exports = {
 if (!message.member.hasPermission("MANAGE_MESSAGES")) 
   return  message.reply("You don't have permissions to send out a notice!").then(msg => msg.delete({ timeout: 3000})) 
 
+if(!args[0].match(/^<#(\d+)>$/)) {
+  return message.channel.send(`Please use the correct format!
+  **Usage:** c!announce <channel> <announcement>`).then(msg => msg.delete({ timeout: 5000})) 
+  }
 
-
+let sendchannel = message.mentions.channels.first()
+if(!sendchannel) return message.channel.send(`I could not find that channel in the guild!`)
 
 if (!args[1])
 return message.channel.send("Please set a notice!").then(msg => msg.delete({ timeout: 3000}))
 
-const channel = message.guild.channels.cache.find(channel => channel.name === "notice-board");
 
-if (!channel)
-return message.channel.send("You need a notice-board channel to set a notice with this bot! Create a channel named notice-board.")
 
 const embed = new MessageEmbed()
 .setColor(roleColor)
@@ -35,7 +37,7 @@ const embed = new MessageEmbed()
 .setAuthor(message.author.username , message.author.displayAvatarURL())
 .setDescription(`${args.slice().join(" ")}`)
 
-channel.send(`@here`, embed)
+sendchannel.send(`@here`, embed)
 
 message.channel.send("Notice made by user: " + message.author.username )
 
