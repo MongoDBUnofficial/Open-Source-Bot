@@ -16,7 +16,7 @@ module.exports = {
 if (!message.member.hasPermission("MANAGE_MESSAGES")) 
   return  message.reply("You don't have permissions to announce!").then(msg => msg.delete({ timeout: 3000})) 
 
-  if(!message.mentions.channels.has(args[0])) 
+  if(!args[0].startsWith("<#") && !args[0].endsWith(">")) 
   return message.channel.send(`Please use the correct format!
   **Usage:** c!announce <channel> <announcement>`)
 
