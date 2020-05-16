@@ -17,7 +17,7 @@ if (!message.member.hasPermission("MANAGE_MESSAGES"))
 
   if(!args[0].match(/^<#(\d+)>$/)) {
   return message.channel.send(`Please use the correct format!
-  **Usage:** c!announce <channel> <announcement>`)
+  **Usage:** c!announce <channel> <announcement>`).then(msg => msg.delete({ timeout: 5000})) 
   }
 
 let sendchannel = message.mentions.channels.first()

@@ -7,7 +7,7 @@ module.exports = {
 
         //infinity glitch
 if(message.content.toLowerCase().startsWith("c!clear infinity")) {
-    message.reply("❌ Thats not a number!")
+    message.reply("❌ Thats not a number!").then(msg => msg.delete({ timeout: 3000})) 
     return;
 }
 
@@ -17,17 +17,17 @@ if(message.content.toLowerCase().startsWith("c!clear infinity")) {
     
         // no permissions
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-            return message.reply("❌ You don't have permissions to do that!").then(m => m.delete(5000));
+            return message.reply("❌ You don't have permissions to do that!").then(msg => msg.delete({ timeout: 3000})) 
         }
 
         // if its not a number
         if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-            return message.reply("❌ Thats not a number!").then(m => m.delete(5000));
+            return message.reply("❌ Thats not a number!").then(msg => msg.delete({ timeout: 3000})) 
         }
 
         // cant delete
         if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) {
-            return message.reply("❌ The bot does not have the manage messages permission!").then(m => m.delete(5000));
+            return message.reply("❌ The bot does not have the manage messages permission!").then(msg => msg.delete({ timeout: 3000})) 
         }
 
         let deleteAmount;
@@ -39,6 +39,6 @@ if(message.content.toLowerCase().startsWith("c!clear infinity")) {
         }
 
         message.channel.bulkDelete(deleteAmount, true)
-            .then(deleted => message.channel.send(`Deleted ${deleted.size} messages.`)).then(m => m.delete(5000));
+            .then(deleted => message.channel.send(`Deleted ${deleted.size} messages.`)).then(msg => msg.delete({ timeout: 3000})) 
     }
 }
