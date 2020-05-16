@@ -4,7 +4,7 @@ module.exports = {
     name: "ask",
     category: "fun",
     description: "Gives a reply to your question.",
-    usage: "c!ask [question]",
+    usage: "`c!ask <question>`",
     run: async ( client,message, args) => {
 
         if (!args[1])

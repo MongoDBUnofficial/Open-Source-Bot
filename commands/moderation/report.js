@@ -5,7 +5,7 @@ module.exports = {
     name: "report",
     category: "moderation",
     description: "Reports a member",
-    usage: "c!report <mention>",
+    usage: "`c!report <mention>`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();

@@ -5,6 +5,7 @@ module.exports = {
     name: "bins",
     category: "info",
     description: "Where you can put large ammounts of text without spamming in the server.",
+    usage: "`c!bins`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();

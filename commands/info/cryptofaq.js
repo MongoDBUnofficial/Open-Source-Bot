@@ -6,6 +6,7 @@ module.exports = {
     name: "cryptofaq",
     category: "info",
     description: "A FAQ For the bot.",
+    usage: "`c!cryptofaq`",
     run: async ( client,message, args) => {
 
         const roleColor = message.guild.me.displayHexColor;

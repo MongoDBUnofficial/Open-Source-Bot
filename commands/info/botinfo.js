@@ -6,6 +6,7 @@ module.exports = {
     name: "botinfo",
     category: "info",
     description: "Returns with bot stats.",
+    usage: "`c!botinfo`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 

@@ -3,6 +3,7 @@ module.exports = {
     aliases: ["purge"],
     category: "moderation",
     description: "Purges the ammount of messages you enter.",
+    usage: "`c!clear <ammount>`",
     run: async (client, message, args) => {
 
         //infinity glitch

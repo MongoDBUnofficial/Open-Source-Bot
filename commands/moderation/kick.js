@@ -6,7 +6,7 @@ module.exports = {
     name: "kick",
     category: "moderation",
     description: "Kicks a member.",
-    usage: "c!kick <mention>",
+    usage: "`c!kick <mention>`",
     run: async ( client,message, args) => {
 
 const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;

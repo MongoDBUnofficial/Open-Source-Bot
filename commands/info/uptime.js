@@ -6,6 +6,7 @@ module.exports = {
     name: "uptime",
     category: "info",
     description: "Recieve the bots uptime.",
+    usage: "`c!uptime`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();

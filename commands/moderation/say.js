@@ -4,6 +4,7 @@ module.exports = {
     name: "say",
     category: "moderation",
     description: "Messages through the bot.",
+    usage: "`c!say <message>`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();

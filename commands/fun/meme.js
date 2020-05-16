@@ -5,6 +5,7 @@
             name: "meme",
             category: "fun",
             description: "Activates the meme machine 🖨.",
+            usage: "`c!meme`",
             run: async (client, message, args) => {
 
                 const subReddits = ["dankmeme", "meme", "me_irl", "PewdiepieSubmissions", "DankMemesFromSite19"];

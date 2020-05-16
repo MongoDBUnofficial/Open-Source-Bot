@@ -6,7 +6,7 @@ module.exports = {
     name: "ban",
     category: "moderation",
     description: "bans the member",
-    usage: "c!ban <mention>",
+    usage: "`c!ban <mention>`",
     run: async (client, message, args) => {
         const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
 

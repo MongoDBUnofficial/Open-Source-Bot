@@ -5,7 +5,7 @@ module.exports = {
     aliases: ["userinfo","user","who"],
     category: "info",
     description: "Brings back user information.",
-    usage: "c!whois [mention]",
+    usage: "`c!whois [mention]`",
     run: async ( client,message, args) => {
 
         const roleColor = message.guild.me.displayHexColor;

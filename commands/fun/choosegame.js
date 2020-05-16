@@ -5,7 +5,7 @@ module.exports = {
     name: "choosegame",
     category: "fun",
     description: "Returns a random game.",
-    usage: "c!choosegame",
+    usage: "`c!choosegame`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 

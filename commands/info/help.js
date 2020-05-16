@@ -5,7 +5,7 @@ module.exports = {
     name: "help",
     category: "info",
     description: "Gives you info about commands.",
-    usage: "c!help [command]",
+    usage: "`c!help [command]`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete(); 
