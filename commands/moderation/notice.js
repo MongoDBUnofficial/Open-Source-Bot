@@ -5,7 +5,7 @@ module.exports = {
     name: "notice",
     category: "moderation",
     description: "If the server has a channel correctly named 'notice-board' it will send what the user said in an embed, very similar to the announce command. It will only use here and not everyone.",
-    usage: "c!notice <your message> (CAN INCLUDE MULTIPLE LINES WITH SHIFT + ENTER AND SUPPORTS MARKDOWN)",
+    usage: " `c!notice <channel> <notice>`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();

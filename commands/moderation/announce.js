@@ -4,7 +4,7 @@ module.exports = {
     name: "announce",
     category: "moderation",
     description: "If the server has a channel correctly named 'Announcements' the bot will announce what the user says.",
-    usage: "c!announce <your message> (CAN INCLUDE MULTIPLE LINES WITH SHIFT + ENTER AND SUPPORTS MARKDOWN)",
+    usage: "`c!announce <channel> <announcement>`",
     run: async ( client,message, args) => {
 
         if (message.deletable) message.delete();
