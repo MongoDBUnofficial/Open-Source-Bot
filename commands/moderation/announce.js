@@ -1,5 +1,4 @@
 const { MessageEmbed } = require('discord.js');
-const { stripIndents } = require("common-tags")
 
 module.exports = {
     name: "announce",
@@ -20,9 +19,6 @@ if (!message.member.hasPermission("MANAGE_MESSAGES"))
   return message.channel.send(`Please use the correct format!
   **Usage:** c!announce <channel> <announcement>`)
   }
-if(args[0] !== message.mentions.channels.first())
-return message.channel.send(`Please use the correct format to announce.
-**Usage:** c!announce <channel> <announcement>`).then(msg => msg.delete({ timeout: 3000}))
 
 let sendchannel = message.mentions.channels.first()
 if(!sendchannel) return message.channel.send(`I could not find that channel in the guild!`)
