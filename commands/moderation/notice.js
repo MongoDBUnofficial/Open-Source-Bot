@@ -35,7 +35,7 @@ const embed = new MessageEmbed()
 .setTitle("Notice")
 .setFooter(message.guild.name, message.guild.iconURL())
 .setAuthor(message.author.username , message.author.displayAvatarURL())
-.setDescription(`${args.slice().join(" ")}`)
+.setDescription(`${args.slice(1).join(" ")}`)
 
 sendchannel.send(`@here`, embed)
 
