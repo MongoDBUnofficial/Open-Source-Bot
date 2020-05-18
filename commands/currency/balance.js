@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
     name: "balance",
     category: "currency",
     description: "Replies with your Crypto Bot balance.",
@@ -8,4 +8,4 @@ module.exports = {
         message.reply("Command in development.")
 
     }
-}
+} */
