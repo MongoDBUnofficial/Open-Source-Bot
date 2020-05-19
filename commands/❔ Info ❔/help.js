@@ -32,12 +32,12 @@ function getAll(client, message) {
     const commands = (category) => {
         return client.commands
         .filter(cmd => cmd.category === category)
-        .map(cmd => ` ${cmd.name}`)
-        .join(",")
+        .map(cmd => `- \`${cmd.name}`)
+        .join("\n")
     }
 
 const info = client.categories
-.map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n \`\`\`${commands(cat)}\`\`\``)
+.map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n ${commands(cat)}`)
 .reduce((string, category) => string + " \n " + `${category}`)
 
 return message.channel.send(embed.setDescription(`${info}`))
