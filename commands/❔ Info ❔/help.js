@@ -1,12 +1,15 @@
 const { MessageEmbed } = require('discord.js');
 const { stripIndents } = require("common-tags")
 
+
 module.exports = {
     name: "help",
     category: "❔ Info ❔",
     description: "Gives you info about commands.",
     usage: "`c!help [command]`",
     run: async ( client,message, args) => {
+
+
 
         if (message.deletable) message.delete(); 
     
@@ -20,8 +23,11 @@ if(args[0]) {
     }
 }
 
+
+
 function getAll(client, message) {
     const embed = new MessageEmbed()
+    .setColor(message.guild.me.displayHexColor)
 
     const commands = (category) => {
         return client.commands
@@ -31,8 +37,8 @@ function getAll(client, message) {
     }
 
 const info = client.categories
-.map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \`\`\`${commands(cat)}\`\`\``)
-.reduce((string, category) => string + " " + `${category}`)
+.map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n \`\`\`${commands(cat)}\`\`\``)
+.reduce((string, category) => string + " \n " + `${category}`)
 
 return message.channel.send(embed.setDescription(`${info}`))
 
@@ -40,6 +46,7 @@ return message.channel.send(embed.setDescription(`${info}`))
 
 function getCMD(client, message, input) {
     const embed = new MessageEmbed()
+    .setColor(message.guild.me.displayHexColor)
 
     const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
     
