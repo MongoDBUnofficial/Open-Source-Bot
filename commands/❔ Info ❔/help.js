@@ -9,12 +9,17 @@ module.exports = {
     usage: "`c!help [command]`",
     run: async ( client,message, args) => {
 
-
+    const sentembed = new MessageEmbed()
+    .setDescription("Sent a list of commands!")
+    .setColor(message.guild.me.displayHexColor)
+    message.channel.send(sentembed)
 
         if (message.deletable) message.delete(); 
     
 if(args[0]) {
-    return getCMD(client, message, args[0])
+    return getCMD(client, message, args[0]) 
+
+
 } else {
     return getAll(client, message)
 
@@ -40,7 +45,7 @@ const info = client.categories
 .map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n ${commands(cat)}`)
 .reduce((string, category) => string + " \n \n " + `${category}`)
 
-return message.author.createDM(embed.setDescription(`${info}`))
+return message.author.send(embed.setDescription(`${info}`))
 
 }
 
@@ -64,5 +69,5 @@ function getCMD(client, message, input) {
         embed.setFooter(`Information in <> is required for the command to work. [] Is optional.`)
     }
 
-    return message.channel.send(embed.setColor("GREEN").setDescription(info))
+    return message.author.send(embed.setColor("GREEN").setDescription(info))
 }
