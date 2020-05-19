@@ -3,7 +3,7 @@ const randomPuppy = require("random-puppy");
 
 module.exports = {
     name: "starwars",
-    category: "🎉 fun 🎉",
+    category: "🎉 Fun 🎉",
     description: "Random post from the star wars redit.",
     usage: "`c!starwars`",
     run: async (client, message, args) => {

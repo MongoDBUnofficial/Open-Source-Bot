@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "announce",
-    category: "moderation",
+    category: "🔐 Moderation 🔐",
     description: "If the server has a channel correctly named 'Announcements' the bot will announce what the user says.",
     usage: "`c!announce <channel> <announcement>`",
     run: async ( client,message, args) => {

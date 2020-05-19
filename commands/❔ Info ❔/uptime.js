@@ -4,7 +4,7 @@ const moment = require("moment");
 
 module.exports = {
     name: "uptime",
-    category: "info",
+    category: "❔ Info ❔",
     description: "Recieve the bots uptime.",
     usage: "`c!uptime`",
     run: async ( client,message, args) => {

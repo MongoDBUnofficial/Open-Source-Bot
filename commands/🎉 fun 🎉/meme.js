@@ -1,9 +1,9 @@
         const { MessageEmbed } = require("discord.js");
-        const randomPuppy = require("random-puppy");
+        const randomPuppy = require("./node_modules/random-puppy");
         
         module.exports = {
             name: "meme",
-            category: "🎉 fun 🎉",
+            category: "🎉 Fun 🎉",
             description: "Activates the meme machine 🖨.",
             usage: "`c!meme`",
             run: async (client, message, args) => {

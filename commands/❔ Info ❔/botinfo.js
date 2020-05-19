@@ -4,7 +4,7 @@ const moment = require("moment");
 
 module.exports = {
     name: "botinfo",
-    category: "info",
+    category: "❔ Info ❔",
     description: "Returns with bot stats.",
     usage: "`c!botinfo`",
     run: async ( client,message, args) => {

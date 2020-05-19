@@ -1,7 +1,7 @@
 module.exports = {
     name: "clear",
     aliases: ["purge"],
-    category: "moderation",
+    category: "🔐 Moderation 🔐",
     description: "Purges the ammount of messages you enter.",
     usage: "`c!clear <ammount>`",
     run: async (client, message, args) => {

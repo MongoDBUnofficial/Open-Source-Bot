@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
     name: "whois",
     aliases: ["userinfo","user","who"],
-    category: "info",
+    category: "❔ Info ❔",
     description: "Brings back user information.",
     usage: "`c!whois [mention]`",
     run: async ( client,message, args) => {

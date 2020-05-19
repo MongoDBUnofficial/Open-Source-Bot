@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: "bins",
-    category: "info",
+    category: "❔ Info ❔",
     description: "Where you can put large ammounts of text without spamming in the server.",
     usage: "`c!bins`",
     run: async ( client,message, args) => {

@@ -4,7 +4,7 @@ const { promptMessage } = require("../../functions.js");
 
 module.exports = {
     name: "ban",
-    category: "moderation",
+    category: "🔐 Moderation 🔐",
     description: "bans the member",
     usage: "`c!ban <mention>`",
     run: async (client, message, args) => {

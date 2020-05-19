@@ -4,7 +4,7 @@ const { promptMessage } = require("../../functions")
 
 module.exports = {
     name: "kick",
-    category: "moderation",
+    category: "🔐 Moderation 🔐",
     description: "Kicks a member.",
     usage: "`c!kick <mention>`",
     run: async ( client,message, args) => {

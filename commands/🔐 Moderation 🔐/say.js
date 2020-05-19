@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "say",
-    category: "moderation",
+    category: "🔐 Moderation 🔐",
     description: "Messages through the bot.",
     usage: "`c!say <message>`",
     run: async ( client,message, args) => {
