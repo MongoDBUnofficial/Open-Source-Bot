@@ -3,7 +3,7 @@
         
         module.exports = {
             name: "meme",
-            category: "fun",
+            category: "🎉 fun 🎉",
             description: "Activates the meme machine 🖨.",
             usage: "`c!meme`",
             run: async (client, message, args) => {

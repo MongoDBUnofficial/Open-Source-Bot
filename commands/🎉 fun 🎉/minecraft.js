@@ -3,7 +3,7 @@ const randomPuppy = require("random-puppy");
 
 module.exports = {
     name: "minecraft",
-    category: "fun",
+    category: "🎉 fun 🎉",
     description: "Random post from the minecraft redit.",
     usage: "`c!minecraft`",
     run: async (client, message, args) => {

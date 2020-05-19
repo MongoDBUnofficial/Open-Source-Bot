@@ -3,7 +3,7 @@ const { stripIndents } = require("common-tags")
 
 module.exports = {
     name: "choosegame",
-    category: "fun",
+    category: "🎉 fun 🎉",
     description: "Returns a random game.",
     usage: "`c!choosegame`",
     run: async ( client,message, args) => {
