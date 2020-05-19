@@ -9,11 +9,6 @@ module.exports = {
     usage: "`c!help [command]`",
     run: async ( client,message, args) => {
 
-    const sentembed = new MessageEmbed()
-    .setDescription("Sent a list of commands!")
-    .setColor(message.guild.me.displayHexColor)
-    message.channel.send(sentembed)
-
         if (message.deletable) message.delete(); 
     
 if(args[0]) {
@@ -31,6 +26,13 @@ if(args[0]) {
 
 
 function getAll(client, message) {
+    
+    const sentembed = new MessageEmbed()
+    .setTitle("❔ Commands Sent! ❔")
+    .setDescription("Sent a DM of the list of commands!")
+    .setColor(message.guild.me.displayHexColor)
+    message.channel.send(sentembed)
+
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
 
@@ -50,10 +52,19 @@ return message.author.send(embed.setDescription(`${info}`))
 }
 
 function getCMD(client, message, input) {
+
+    const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
+
+    const sentembed = new MessageEmbed()
+    .setTitle(`❔ ${cmd} Info Sent! ❔`)
+    .setDescription(`Sent a DM on how to use ${cmd}!`)
+    .setColor(message.guild.me.displayHexColor)
+    message.channel.send(sentembed)
+
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
 
-    const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
+
     
     let info = `No information found for that command! **${input.toLowerCase()}**`;
 
