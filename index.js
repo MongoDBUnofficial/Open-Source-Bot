@@ -46,7 +46,7 @@ client.on("ready", () => {
     }, 2500);
 
 });
-
+/*
 client.on("message", async message => {
     
     
@@ -77,6 +77,7 @@ client.on("message", async message => {
 
 
 });
+*/
 
 //reply prefix to mention
 client.on('message', message => {
