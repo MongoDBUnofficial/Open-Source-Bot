@@ -31,7 +31,7 @@ function getAll(client, message) {
     .setTitle("❔ Commands Sent! ❔")
     .setDescription("Sent a DM of the list of commands!")
     .setColor(message.guild.me.displayHexColor)
-    message.channel.send(sentembed)
+    message.channel.send(sentembed).catch(console.log(err))
 
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -47,7 +47,7 @@ const info = client.categories
 .map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n ${commands(cat)}`)
 .reduce((string, category) => string + " \n \n " + `${category}`)
 
-return message.author.send(embed.setDescription(`${info}`))
+return message.author.send(embed.setDescription(`${info}`)).catch(console.log(err))
 
 }
 
