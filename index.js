@@ -28,7 +28,7 @@ require(`./handler/${handler}`)(client);
 //Ready
 client.on("ready", () => {
 
-    console.log(`${client.user.username} is ready!`) + client.user.setStatus("online"); 
+    console.log(`${client.user.username} is ready!`) + client.user.setStatus("invisible"); 
   
     let statuses = [
      `Game News`,
@@ -42,7 +42,7 @@ client.on("ready", () => {
     
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
-        client.user.setActivity(status, {type: "INVISIBLE"})
+        client.user.setActivity(status, {type: "LISTENING"})
     }, 2500);
 
 });
