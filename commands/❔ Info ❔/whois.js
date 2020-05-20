@@ -35,7 +35,6 @@ module.exports = {
         .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
         .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
         .setFooter(message.guild.name, message.guild.iconURL())
-        .setImage('https://cdn.discordapp.com/attachments/657250830310965259/657252699208810517/unknown.png')
         .setThumbnail(whoismember.displayAvatarURL())
         .setTimestamp()
         .setColor(roleColor)

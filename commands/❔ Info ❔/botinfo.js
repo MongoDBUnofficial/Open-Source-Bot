@@ -55,7 +55,6 @@ const embed = new MessageEmbed()
     )
 .setFooter("Heroku Hosting")
 .setTimestamp()
-.setImage('https://cdn.discordapp.com/attachments/657250830310965259/657252699208810517/unknown.png')
 
 message.channel.send(embed)
 

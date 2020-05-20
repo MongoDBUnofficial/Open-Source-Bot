@@ -9,7 +9,6 @@ module.exports = {
     usage: "`c!help [command]`",
     run: async ( client,message, args) => {
 
-        if (message.deletable) message.delete(); 
     
 if(args[0]) {
     return getCMD(client, message, args[0]) 
@@ -27,11 +26,7 @@ if(args[0]) {
 
 function getAll(client, message) {
     
-    const sentembed = new MessageEmbed()
-    .setTitle("❔ Commands Sent! ❔")
-    .setDescription("Sent a DM of the list of commands!")
-    .setColor(message.guild.me.displayHexColor)
-        message.channel.send(sentembed)
+
  
     
 
@@ -57,11 +52,6 @@ function getCMD(client, message, input) {
 
     const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
 
-    const sentembed = new MessageEmbed()
-    .setTitle(`❔ ${cmd.name} Info Sent! ❔`)
-    .setDescription(`Sent a DM on how to use ${cmd.name}!`)
-    .setColor(message.guild.me.displayHexColor)
-    message.channel.send(sentembed)
 
 
 

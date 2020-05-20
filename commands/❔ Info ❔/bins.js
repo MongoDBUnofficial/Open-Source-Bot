@@ -15,12 +15,15 @@ module.exports = {
         const embed = new MessageEmbed()
 
     .setFooter(message.author.tag)
-    .setThumbnail(message.author.AvatarURL)
+    
     .setColor(roleColor)
-    .addField("**Reccomended bin:**", "https://sourceb.in/")
+    .setThumbnail(message.author.avatarURL())
+    .addField("**Code Bins**", "https://sourceb.in/ \n https://mystb.in \n https://hasteb.in/ \n https://pastebin.com/")
     .setTimestamp()
 
-    message.channel.send(embed)
+message.channel.send(embed)
+
+
     
 
     }
