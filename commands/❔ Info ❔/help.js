@@ -31,7 +31,7 @@ function getAll(client, message) {
     .setTitle("❔ Commands Sent! ❔")
     .setDescription("Sent a DM of the list of commands!")
     .setColor(message.guild.me.displayHexColor)
-    message.channel.send(sentembed).catch(console.log(error))
+    message.channel.send(sentembed).catch(console.log("CANNOT SENT MESSAGE TO USER (CATCHED ERROR)"))
 
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -47,7 +47,7 @@ const info = client.categories
 .map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n ${commands(cat)}`)
 .reduce((string, category) => string + " \n \n " + `${category}`)
 
-return message.author.send(embed.setDescription(`${info}`)).catch(console.log(error))
+return message.author.send(embed.setDescription(`${info}`)).catch(console.log("CANNOT SENT MESSAGE TO USER (CATCHED ERROR)"))
 
 }
 
@@ -59,7 +59,7 @@ function getCMD(client, message, input) {
     .setTitle(`❔ ${cmd.name} Info Sent! ❔`)
     .setDescription(`Sent a DM on how to use ${cmd.name}!`)
     .setColor(message.guild.me.displayHexColor)
-    message.channel.send(sentembed).catch(console.log(error))
+    message.channel.send(sentembed).catch(console.log("CANNOT SENT MESSAGE TO USER (CATCHED ERROR)"))
 
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -80,5 +80,5 @@ function getCMD(client, message, input) {
         embed.setFooter(`Information in <> is required for the command to work. [] Is optional.`)
     }
 
-    return message.author.send(embed.setColor("GREEN").setDescription(info)).catch(console.log(err))
+    return message.author.send(embed.setColor("GREEN").setDescription(info)).catch(console.log("CANNOT SENT MESSAGE TO USER (CATCHED ERROR)"))
 }
