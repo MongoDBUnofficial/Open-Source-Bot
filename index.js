@@ -28,8 +28,8 @@ require(`./handler/${handler}`)(client);
 //Ready
 client.on("ready", () => {
 
-    console.log(`${client.user.username} is ready!`) + client.user.setStatus("invisible"); 
-  /*
+    console.log(`${client.user.username} is ready!`) + client.user.setStatus("online"); 
+  
     let statuses = [
      `Game News`,
      `BETA Construction`,
@@ -44,9 +44,9 @@ client.on("ready", () => {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         client.user.setActivity(status, {type: "LISTENING"})
     }, 2500);
-*/
+
 });
-/*
+
 client.on("message", async message => {
     
     
@@ -77,7 +77,7 @@ client.on("message", async message => {
 
 
 });
-*/
+
 
 //reply prefix to mention
 client.on('message', message => {
@@ -96,7 +96,7 @@ client.on('message', message => {
     const roleColor = message.guild.me.displayHexColor;
 
     if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto [BETA]#4963") {
-/*
+
         const embed = new MessageEmbed()
         .setTitle("❔ Guidance ❔")
         .setURL('https://top.gg/bot/697963363476570142')
@@ -106,15 +106,7 @@ client.on('message', message => {
         Thanks for using ${client.user.username}.`)
         .setColor(roleColor)
 
-        message.channel.send(embed) */
-
-        const embed = new MessageEmbed()
-        .setTitle("BOT DOWN.")
-        .setURL('https://top.gg/bot/697963363476570142')
-        .setDescription(`All commands currently disabled.`)
-        .setColor(roleColor)
-
-        message.channel.send(embed)
+        message.channel.send(embed) 
 
     
     }
