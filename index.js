@@ -96,7 +96,7 @@ client.on('message', message => {
     const roleColor = message.guild.me.displayHexColor;
 
     if(message.mentions.users.first() && message.mentions.users.first().tag === "Crypto [BETA]#4963") {
-
+/*
         const embed = new MessageEmbed()
         .setTitle("❔ Guidance ❔")
         .setURL('https://top.gg/bot/697963363476570142')
@@ -104,6 +104,14 @@ client.on('message', message => {
         **Help Command:** c!help
         
         Thanks for using ${client.user.username}.`)
+        .setColor(roleColor)
+
+        message.channel.send(embed) */
+
+        const embed = new MessageEmbed()
+        .setTitle("BOT DOWN.")
+        .setURL('https://top.gg/bot/697963363476570142')
+        .setDescription(`All commands currently disabled.`)
         .setColor(roleColor)
 
         message.channel.send(embed)
