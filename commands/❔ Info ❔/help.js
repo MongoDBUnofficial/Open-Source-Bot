@@ -56,10 +56,10 @@ function getCMD(client, message, input) {
     const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
 
     const sentembed = new MessageEmbed()
-    .setTitle(`❔ ${cmd} Info Sent! ❔`)
-    .setDescription(`Sent a DM on how to use ${cmd}!`)
+    .setTitle(`❔ ${cmd.name} Info Sent! ❔`)
+    .setDescription(`Sent a DM on how to use ${cmd.name}!`)
     .setColor(message.guild.me.displayHexColor)
-    message.channel.send(sentembed)
+    message.channel.send(sentembed).catch(console.log(err))
 
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -80,5 +80,5 @@ function getCMD(client, message, input) {
         embed.setFooter(`Information in <> is required for the command to work. [] Is optional.`)
     }
 
-    return message.author.send(embed.setColor("GREEN").setDescription(info))
+    return message.author.send(embed.setColor("GREEN").setDescription(info)).catch(console.log(err))
 }
