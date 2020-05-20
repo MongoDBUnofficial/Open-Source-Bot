@@ -31,12 +31,8 @@ function getAll(client, message) {
     .setTitle("❔ Commands Sent! ❔")
     .setDescription("Sent a DM of the list of commands!")
     .setColor(message.guild.me.displayHexColor)
-
-    try {
         message.channel.send(sentembed)
-      } catch (error) {
-        console.log("idk why this would happen");
-      }
+ 
     
 
     const embed = new MessageEmbed()
@@ -53,15 +49,7 @@ const info = client.categories
 .map(cat => stripIndents`**${cat[0].toUpperCase() + cat.slice(1)}** \n ${commands(cat)}`)
 .reduce((string, category) => string + " \n \n " + `${category}`)
 
-
-
-try {
-    return message.author.send(embed.setDescription(`${info}`))
-  } catch (error) {
-    console.log("USER DOESN'T HAVE OPEN DM'S");
-    message.reply("I cant send it through your DM's!")
     message.channel.send(embed.setDescription(`${info}`))
-  }
 
 }
 
@@ -73,13 +61,9 @@ function getCMD(client, message, input) {
     .setTitle(`❔ ${cmd.name} Info Sent! ❔`)
     .setDescription(`Sent a DM on how to use ${cmd.name}!`)
     .setColor(message.guild.me.displayHexColor)
-
-
-    try {
     message.channel.send(sentembed)
-      } catch (error) {
-console.log("idk why this would happen")
-      }
+
+
 
     const embed = new MessageEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -100,12 +84,7 @@ console.log("idk why this would happen")
         embed.setFooter(`Information in <> is required for the command to work. [] Is optional.`)
     }
 
-
-    try {
-    return message.author.send()
-      } catch (error) {
-        console.log("USER DOESN'T HAVE OPEN DM'S");
-        message.reply("I cant send it through your DM's!")
         message.channel.send(embed.setColor("GREEN").setDescription(info))
-      }
+  
+      
 }
