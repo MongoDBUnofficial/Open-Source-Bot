@@ -3,8 +3,8 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: "8ball",
     category: "🎉 Fun 🎉",
-    description: "Gives a reply to your question.",
-    usage: "`c!ask <question>`",
+    description: "Responds with a random yes/no answer to your question.",
+    usage: "`c!8ball <question>`",
     run: async ( client,message, args) => {
 
         if (!args[1])
