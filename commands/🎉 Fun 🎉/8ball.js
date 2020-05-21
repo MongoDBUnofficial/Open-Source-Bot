@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-    name: "ask",
+    name: "8ball",
     category: "🎉 Fun 🎉",
     description: "Gives a reply to your question.",
     usage: "`c!ask <question>`",
