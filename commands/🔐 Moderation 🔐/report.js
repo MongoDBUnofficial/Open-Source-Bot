@@ -39,6 +39,10 @@ ${rMember} (${rMember.id})
 ${message.channel}
 **Reason:** 
 ${args.slice(1).join(" ")}`)
+.setAuthor("Reported member:" + rMember.username , rMember.displayAvatarURL())
+if(rMember.avatarURL().includes("a_")) {
+    embed.setAuthor(rMember.username , rMember.displayAvatarURL({ format: 'gif' }))
+}
 
 channel.send(embed)
 

@@ -16,21 +16,28 @@ module.exports = {
 
 const embed = new MessageEmbed()
 .setThumbnail(message.guild.iconURL())
-.setAuthor(message.guild.name)
+.setAuthor(message.guild.name + "'s Information")
 .addFields(
 
-    { name : 'Server Member Count:', value : `\`\`\`${message.guild.memberCount} Members\`\`\``, inline: true},
-    { name : 'Server Name:', value : `\`\`\`${message.guild.name}\`\`\``, inline: true },
+    { name : 'Server Member Count:', value : `\`\`\`${message.guild.memberCount} Members\`\`\``, inline : true},
+    { name : 'Server Name:', value : `\`\`\`${message.guild.name}\`\`\``, inline : true },
     { name : 'Bot Joined At:', value : `\`\`\`${joined}\`\`\``},
     { name : 'Created At:', value : `\`\`\`${guildcreated}\`\`\``},
-    { name : 'Channel Count:', value: `\`\`\`${message.guild.channels.cache.size}\`\`\``, inline: true},
-    { name : 'Role Count:', value: `\`\`\`${message.guild.roles.cache.size}\`\`\``, inline: true},
-    { name : 'Server Region:', value: `\`\`\`${message.guild.region}\`\`\``, inline: true}
+    { name : 'Channel Count:', value : `\`\`\`${message.guild.channels.cache.size}\`\`\``, inline : true},
+    { name : 'Role Count:', value : `\`\`\`${message.guild.roles.cache.size}\`\`\``, inline : true},
+    { name : 'Server Region:', value : `\`\`\`${message.guild.region}\`\`\``, inline : true},
+    { name : 'Server ID:', value : `\`\`\`${message.guild.id}\`\`\``},
+    { name : 'Emoji Count:', value : `\`\`\`${message.guild.emojis.cache.size}\`\`\``, inline : true},
+    { name : 'Verification Level:', value : `\`\`\`${message.guild.verificationLevel}\`\`\``, inline : true}
 
 )
 .setColor(roleColor)
 .setFooter(message.guild.name)
 .setTimestamp()
+.setAuthor(message.guild.name + "'s Information", message.guild.iconURL())
+if(message.guild.iconURL().includes("a_")) {
+    embed.setAuthor(message.guild.name + "'s Information", message.guild.iconURL({ format: 'gif' }))
+}
 
 message.channel.send(embed)
 

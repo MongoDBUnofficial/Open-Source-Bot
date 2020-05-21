@@ -13,7 +13,11 @@ module.exports = {
             .setColor("#ffffff")
             .setFooter(message.guild.me.displayName, client.user.displayAvatarURL)
             .setDescription("Add a reaction to one of these emojis to play the game!")
-            .setTimestamp();
+            .setTimestamp()
+            .setAuthor(message.author.username , message.author.displayAvatarURL())
+            if(message.author.avatarURL().includes("a_")) {
+                embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
+            }
 
         const m = await message.channel.send(embed);
         const reacted = await promptMessage(m, message.author, 30, chooseArr);

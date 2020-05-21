@@ -9,8 +9,7 @@ module.exports = {
     run: async ( client,message, args) => {
 
         const roleColor = message.guild.me.displayHexColor;
-        if (message.deletable) message.delete();
-
+        
         const whoismember = message.mentions.users.first() || message.author;
         const member = message.guild.member(whoismember);
         let status = '';
@@ -26,7 +25,6 @@ module.exports = {
           status = 'Transparent';
             }
         const whoisEmbed = new MessageEmbed()
-        .setAuthor('USER INFORMATION')
         .addField('Username', `\`\`\`${whoismember.tag}\`\`\``, true)
         .addField('User ID', `\`\`\`${whoismember.id}\`\`\``, true)
         .addField('Server', `\`\`\`${message.guild.name}\`\`\``)
@@ -38,6 +36,14 @@ module.exports = {
         .setThumbnail(whoismember.displayAvatarURL())
         .setTimestamp()
         .setColor(roleColor)
+        .setAuthor(whoismember.username , whoismember.displayAvatarURL())
+        if(whoismember.avatarURL().includes("a_")) {
+            whoisEmbed.setAuthor(whoismember.username , whoismember.displayAvatarURL({ format: 'gif' }))
+        }
+        if(whoismember.avatarURL().includes("a_")) {
+          whoisEmbed.setThumbnail(whoismember.displayAvatarURL({ format: 'gif' }))
+      }
+
         message.channel.send(whoisEmbed)
         return;
     }

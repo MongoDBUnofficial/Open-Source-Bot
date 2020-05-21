@@ -33,7 +33,11 @@ function getChoice() {
 const embed = new MessageEmbed()
 .setTitle("Random Game Generator")
 .setColor(roleColor)
-.setDescription(getChoice());
+.setDescription(getChoice())
+.setAuthor(message.author.username , message.author.displayAvatarURL())
+if(message.author.avatarURL().includes("a_")) {
+    embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
+}
 
 
 message.channel.send(embed)

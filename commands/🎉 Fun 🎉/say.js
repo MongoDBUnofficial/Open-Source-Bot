@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "say",
-    category: "🔐 Moderation 🔐",
+    category: "🎉 Fun 🎉",
     description: "Messages through the bot.",
     usage: "`c!say <message>`",
     run: async ( client,message, args) => {
@@ -14,9 +14,12 @@ module.exports = {
         const roleColor = message.guild.me.displayHexColor;
 
         message.channel.send(new MessageEmbed()
-        .setAuthor(message.author.username , message.author.displayAvatarURL())
         .setColor(roleColor)
-        .setDescription(args.join(" ")));
+        .setDescription(args.join(" ")))
+        .setAuthor(message.author.username , message.author.displayAvatarURL())
+        if(message.author.avatarURL().includes("a_")) {
+            embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
+        }
         
     }
 
