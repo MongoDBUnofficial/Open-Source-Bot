@@ -14,18 +14,20 @@ module.exports = {
 
 
 if (!message.member.hasPermission("MANAGE_MESSAGES")) 
-  return  message.reply("You don't have permissions to send out a notice!").then(msg => msg.delete({ timeout: 3000})) 
+  return  message.reply("You must have manage messages permission to set a notice!").then(msg => msg.delete({ timeout: 3000})) 
+
+if (!args[1])
+return message.channel.send("Please set a notice!").then(msg => msg.delete({ timeout: 3000}))
 
 if(!args[0].match(/^<#(\d+)>$/)) {
   return message.channel.send(`Please use the correct format!
-  **Usage:** c!announce <channel> <announcement>`).then(msg => msg.delete({ timeout: 5000})) 
+  **Usage:** c!notice <channel> <notice>`).then(msg => msg.delete({ timeout: 5000})) 
   }
 
 let sendchannel = message.mentions.channels.first()
 if(!sendchannel) return message.channel.send(`I could not find that channel in the guild!`)
 
-if (!args[1])
-return message.channel.send("Please set a notice!").then(msg => msg.delete({ timeout: 3000}))
+
 
 
 
