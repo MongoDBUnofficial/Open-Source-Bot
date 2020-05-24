@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const { formatDate } = require("../../functions.js")
+const moment = require("moment")
+require("moment-duration-format")
 
 module.exports = {
     name: "serverinfo",
@@ -14,13 +16,15 @@ module.exports = {
 
         const guildcreated = formatDate(message.guild.createdAt)
 
+        const serverLevel = ["None","Low","Medium","High","Max"]
+
 const embed = new MessageEmbed()
 .setThumbnail(message.guild.iconURL())
 .setAuthor(message.guild.name + "'s Information")
 .addFields(
 
     { name : 'Server Member Count:', value : `\`\`\`${message.guild.memberCount} Members\`\`\``, inline : true},
-    { name : 'Server Name:', value : `\`\`\`${message.guild.name}\`\`\``, inline : true },
+    { name : 'Server Name:', value : `\`\`\`${message.guild.name}\`\`\``, inline : true},
     { name : 'Bot Joined At:', value : `\`\`\`${joined}\`\`\``},
     { name : 'Created At:', value : `\`\`\`${guildcreated}\`\`\``},
     { name : 'Channel Count:', value : `\`\`\`${message.guild.channels.cache.size}\`\`\``, inline : true},
