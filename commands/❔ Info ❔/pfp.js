@@ -7,12 +7,7 @@ module.exports = {
 
         const pfpmember = message.mentions.users.first() || message.author;
 
-        if(pfpmember.displayAvatarURL().includes("a_")) {
-            message.channel.send(pfpmember.displayAvatarURL({ format: 'gif', dynamic: true, size: 1024 }))
- return;
-        }
-
-message.channel.send(pfpmember.username + "'s Profile Picture. \n" + pfpmember.displayAvatarURL())
+            message.channel.send(pfpmember.displayAvatarURL({dynamic: true})) 
 
     }
 }
