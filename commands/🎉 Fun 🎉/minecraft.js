@@ -20,10 +20,8 @@ module.exports = {
             .setImage(img)
             .setTitle(`From /r/${random}`)
             .setURL(`https://reddit.com/r/${random}`)
-            .setAuthor(message.author.username , message.author.displayAvatarURL())
-            if(message.author.avatarURL().includes("a_")) {
-                embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-            }
+            .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
+            
 
         message.channel.send(embed);
     }

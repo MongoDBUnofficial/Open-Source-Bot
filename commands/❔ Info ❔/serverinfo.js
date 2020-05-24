@@ -19,7 +19,7 @@ module.exports = {
         const serverLevel = ["None","Low","Medium","High","Max"]
 
 const embed = new MessageEmbed()
-.setThumbnail(message.guild.iconURL())
+.setThumbnail(message.guild.iconURL({dynamic: true}))
 .setAuthor(message.guild.name + "'s Information")
 .addFields(
 
@@ -38,10 +38,8 @@ const embed = new MessageEmbed()
 .setColor(roleColor)
 .setFooter(message.guild.name)
 .setTimestamp()
-.setAuthor(message.guild.name + "'s Information", message.guild.iconURL())
-if(message.guild.iconURL().includes("a_")) {
-    embed.setAuthor(message.guild.name + "'s Information", message.guild.iconURL({ format: 'gif' }))
-}
+.setAuthor(message.guild.name + "'s Information", message.guild.iconURL({dynamic: true}))
+
 
 message.channel.send(embed)
 

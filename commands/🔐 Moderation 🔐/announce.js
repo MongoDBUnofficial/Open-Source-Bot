@@ -33,10 +33,7 @@ const embed = new MessageEmbed()
 .setTimestamp()
 .setFooter(message.guild.name, message.guild.iconURL())
 .setDescription(`${args.slice(1).join(" ")}`)
-.setAuthor(message.author.username , message.author.displayAvatarURL())
-if(message.author.avatarURL().includes("a_")) {
-    embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-}
+.setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
 
 sendchannel.send(`@everyone`, embed)
 

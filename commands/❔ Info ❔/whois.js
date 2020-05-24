@@ -33,16 +33,10 @@ module.exports = {
         .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
         .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
         .setFooter(message.guild.name, message.guild.iconURL())
-        .setThumbnail(whoismember.displayAvatarURL())
+        .setThumbnail(whoismember.displayAvatarURL({dynamic: true}))
         .setTimestamp()
         .setColor(roleColor)
-        .setAuthor(whoismember.username , whoismember.displayAvatarURL())
-        if(whoismember.avatarURL().includes("a_")) {
-            whoisEmbed.setAuthor(whoismember.username , whoismember.displayAvatarURL({ format: 'gif' }))
-        }
-        if(whoismember.avatarURL().includes("a_")) {
-          whoisEmbed.setThumbnail(whoismember.displayAvatarURL({ format: 'gif' }))
-      }
+        .setAuthor(whoismember.username , whoismember.displayAvatarURL({dynamic: true}))
 
         message.channel.send(whoisEmbed)
         return;

@@ -34,10 +34,7 @@ return message.channel.send("Please ask something!").then(msg => msg.delete({ ti
                .setTitle(args.slice().join(" "))
                .setDescription(reply)
                .setColor("RANDOM")
-               .setAuthor(message.author.username , message.author.displayAvatarURL())
-               if(message.author.avatarURL().includes("a_")) {
-                   embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-               }
+               .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
 
                message.channel.send(embed)
 

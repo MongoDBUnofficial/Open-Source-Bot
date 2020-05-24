@@ -30,7 +30,6 @@ const embed = new MessageEmbed()
 .setColor("#ff0000")
 .setTimestamp()
 .setFooter(message.guild.name, message.guild.iconURL())
-.setAuthor("Reported member", rMember.user.displayAvatarURL())
 .setDescription(    `**Reported Member:** 
 ${rMember} (${rMember.id})
 **Reported by:
@@ -39,10 +38,7 @@ ${rMember} (${rMember.id})
 ${message.channel}
 **Reason:** 
 ${args.slice(1).join(" ")}`)
-.setAuthor("Reported member:" + rMember.username , rMember.displayAvatarURL())
-if(rMember.avatarURL().includes("a_")) {
-    embed.setAuthor(rMember.username , rMember.displayAvatarURL({ format: 'gif' }))
-}
+.setAuthor("Reported member:" + rMember.username , rMember.displayAvatarURL({dynamic: true}))
 
 channel.send(embed)
 

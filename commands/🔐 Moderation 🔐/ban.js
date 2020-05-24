@@ -71,19 +71,12 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
             .setDescription(stripIndents`**> Banned member:** ${toBan} (${toBan.id})
             **> Banned by:** ${message.member} (${message.member.id})
             **> Reason:** ${args.slice(1).join(" ")}`)
-            .setAuthor(message.author.username , message.author.displayAvatarURL())
-            if(message.author.avatarURL().includes("a_")) {
-                embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-            }
-
+            .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
         const promptEmbed = new MessageEmbed()
             .setColor("GREEN")
             .setAuthor(`This verification becomes invalid after 30s.`)
             .setDescription(`Do you want to ban ${toBan}?`)
-            .setAuthor(toBan.username , toBan.displayAvatarURL())
-            if(toBan.avatarURL().includes("a_")) {
-                embed.setAuthor(toBan.username , toBan.displayAvatarURL({ format: 'gif' }))
-            }
+            .setAuthor(toBan.username , toBan.displayAvatarURL({dynamic: true}))
 
         // Send the message
         await message.channel.send(promptEmbed).then(async msg => {

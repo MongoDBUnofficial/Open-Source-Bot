@@ -18,10 +18,7 @@ module.exports = {
     .setColor(roleColor)
     .addField("**Code Bins**", "https://sourceb.in/ \n https://mystb.in \n https://hasteb.in/ \n https://pastebin.com/")
     .setTimestamp()
-    .setAuthor(message.author.username , message.author.displayAvatarURL())
-    if(message.author.avatarURL().includes("a_")) {
-        embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-    }
+    .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
 
 
 message.channel.send(embed)

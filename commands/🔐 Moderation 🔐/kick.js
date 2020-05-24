@@ -69,19 +69,13 @@ const embed = new MessageEmbed()
 .setDescription(stripIndents`**> Kicked member:** ${toKick} (${toKick.id})
 **> Kicked by:** ${message.author} (${message.author.id})
 **> Reason:** ${args.slice(1).join(" ")}`)
-.setAuthor(message.author.username , message.author.displayAvatarURL())
-if(message.author.avatarURL().includes("a_")) {
-    embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-}
+.setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
 
 const promptEmbed = new MessageEmbed()
 .setColor("GREEN")
 .setAuthor("This verification becomes invalid after 30 seconds.")
 .setDescription(`Do you want to kick ${toKick}?`)
-.setAuthor(toKick.username , toKick.displayAvatarURL())
-if(toKick.avatarURL().includes("a_")) {
-    embed.setAuthor(message.author.username , message.author.displayAvatarURL({ format: 'gif' }))
-}
+.setAuthor(toKick.username , toKick.displayAvatarURL({dynamic: true}))
 
 message.channel.send(promptEmbed).then(async msg => {
 
