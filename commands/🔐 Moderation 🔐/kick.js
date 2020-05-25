@@ -74,8 +74,8 @@ const embed = new MessageEmbed()
 const promptEmbed = new MessageEmbed()
 .setColor("GREEN")
 .setAuthor("This verification becomes invalid after 30 seconds.")
-.setDescription(`Do you want to kick ${toKick}?`)
-.setAuthor(toKick.user.username , toKick.displayAvatarURL({dynamic: true}))
+.setDescription(`Do you want to kick ${toKick.user.tag}?`)
+.setAuthor(toKick.user.username , toKick.user.displayAvatarURL({dynamic: true}))
 
 message.channel.send(promptEmbed).then(async msg => {
 
