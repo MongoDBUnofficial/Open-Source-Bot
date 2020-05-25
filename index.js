@@ -43,7 +43,7 @@ client.on("ready", () => {
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         client.user.setActivity(status, {type: "LISTENING"})
-    }, 2500);
+    }, 20000);
 
 });
 
