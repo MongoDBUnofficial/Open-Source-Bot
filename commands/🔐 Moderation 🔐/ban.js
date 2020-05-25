@@ -68,7 +68,7 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
             .setThumbnail(toBan.user.displayAvatarURL({dynamic: true}))
             .setFooter(message.member.displayName, message.author.displayAvatarURL)
             .setTimestamp()
-            .setDescription(stripIndents`**> Banned member:** ${toBan} (${toBan.id})
+            .setDescription(stripIndents`**> Banned member:** ${toBan.user.username} (${toBan.user.id})
             **> Banned by:** ${message.member} (${message.member.id})
             **> Reason:** ${args.slice(1).join(" ")}`)
             .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
@@ -86,6 +86,8 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
             // Verification stuffs
             if (emoji === "✅") { 
                 msg.delete();
+
+                message.channel.send(embed)
 
                 toBan.ban(args.slice(1).join(" "))
                     .catch(err => {

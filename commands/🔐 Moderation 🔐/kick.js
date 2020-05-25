@@ -64,9 +64,9 @@ if (toKick.hasPermission("KICK_MEMBERS")) {
 
 const embed = new MessageEmbed()
 .setColor("#ff0000")
-.setFooter(message.member.displayName, message.author.displayAvatarURL)
+.setFooter(message.author.username, message.author.displayAvatarURL({dynamic: true}))
 .setTimestamp()
-.setDescription(stripIndents`**> Kicked member:** ${toKick} (${toKick.id})
+.setDescription(stripIndents`**> Kicked member:** ${toKick.user.username} (${toKick.user.id})
 **> Kicked by:** ${message.author} (${message.author.id})
 **> Reason:** ${args.slice(1).join(" ")}`)
 .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
@@ -75,7 +75,7 @@ const promptEmbed = new MessageEmbed()
 .setColor("GREEN")
 .setAuthor("This verification becomes invalid after 30 seconds.")
 .setDescription(`Do you want to kick ${toKick}?`)
-.setAuthor(toKick.username , toKick.displayAvatarURL({dynamic: true}))
+.setAuthor(toKick.user.username , toKick.displayAvatarURL({dynamic: true}))
 
 message.channel.send(promptEmbed).then(async msg => {
 
@@ -83,6 +83,8 @@ const emoji = await promptMessage(msg, message.author, 30, ["✅","❌"]);
 
 if (emoji === "✅") {
     msg.delete()
+
+    message.channel.send(embed)
 
     toKick.kick(args.slice(1).join(" "))
     .catch(err => {
