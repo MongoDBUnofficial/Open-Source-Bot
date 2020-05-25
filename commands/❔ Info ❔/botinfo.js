@@ -11,7 +11,6 @@ module.exports = {
 
         if (message.deletable) message.delete(); 
         const roleColor = message.guild.me.displayHexColor;
-
         const botcreated = formatDate(client.user.createdAt)
         const joined = formatDate(client.user.joinedAt);
 
@@ -55,6 +54,7 @@ const embed = new MessageEmbed()
     )
 .setFooter("Heroku Hosting")
 .setTimestamp()
+.setColor(roleColor)
 
 message.channel.send(embed)
 

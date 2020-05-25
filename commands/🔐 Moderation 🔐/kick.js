@@ -64,7 +64,7 @@ if (toKick.hasPermission("KICK_MEMBERS")) {
 
 const embed = new MessageEmbed()
 .setColor("#ff0000")
-.setFooter(toKick.user.username, toKick.user.displayAvatarURL({dynamic: true}))
+.setFooter(toKick.user.tag , toKick.user.displayAvatarURL({dynamic: true}))
 .setTimestamp()
 .setDescription(stripIndents`**> Kicked member:** ${toKick.user.username} (${toKick.user.id})
 **> Kicked by:** ${message.author} (${message.author.id})
