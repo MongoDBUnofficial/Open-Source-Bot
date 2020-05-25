@@ -1,4 +1,3 @@
-// ＮＯＴ ＴＯ ＢＥ ＤＩＳＴＲＩＢＵＴＥＤ \\
 
 const Discord = require("discord.js");
 const MessageEmbed = Discord.MessageEmbed;
