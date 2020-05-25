@@ -65,7 +65,7 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
         
         const embed = new MessageEmbed()
             .setColor("#ff0000")
-            .setThumbnail(toBan.user.displayAvatarURL)
+            .setThumbnail(toBan.user.displayAvatarURL({dynamic: true}))
             .setFooter(message.member.displayName, message.author.displayAvatarURL)
             .setTimestamp()
             .setDescription(stripIndents`**> Banned member:** ${toBan} (${toBan.id})
@@ -76,7 +76,7 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
             .setColor("GREEN")
             .setAuthor(`This verification becomes invalid after 30s.`)
             .setDescription(`Do you want to ban ${toBan}?`)
-            .setAuthor(toBan.username , toBan.user.displayAvatarURL({dynamic: true}))
+            .setAuthor(toBan.user.username , toBan.user.displayAvatarURL({dynamic: true}))
 
         // Send the message
         await message.channel.send(promptEmbed).then(async msg => {
