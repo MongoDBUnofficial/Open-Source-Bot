@@ -9,7 +9,7 @@ module.exports = {
     usage: "`c!kick <mention>`",
     run: async ( client,message, args) => {
 
-const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+const logChannel = message.guild.channels.cache.find(c => c.name === "bot-logs") || message.channel;
     
 if (message.deletable) message.delete();
 
@@ -64,7 +64,7 @@ if (toKick.hasPermission("KICK_MEMBERS")) {
 
 const embed = new MessageEmbed()
 .setColor("#ff0000")
-.setFooter(message.author.username, message.author.displayAvatarURL({dynamic: true}))
+.setFooter(toKick.user.username, toKick.user.displayAvatarURL({dynamic: true}))
 .setTimestamp()
 .setDescription(stripIndents`**> Kicked member:** ${toKick.user.username} (${toKick.user.id})
 **> Kicked by:** ${message.author} (${message.author.id})
@@ -84,7 +84,6 @@ const emoji = await promptMessage(msg, message.author, 30, ["✅","❌"]);
 if (emoji === "✅") {
     msg.delete()
 
-    message.channel.send(embed)
 
     toKick.kick(args.slice(1).join(" "))
     .catch(err => {

@@ -8,7 +8,7 @@ module.exports = {
     description: "bans the member",
     usage: "`c!ban <mention>`",
     run: async (client, message, args) => {
-        const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logChannel = message.guild.channels.cache.find(c => c.name === "bot-logs") || message.channel;
 
         if (message.deletable) message.delete();
 
@@ -66,12 +66,14 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
         const embed = new MessageEmbed()
             .setColor("#ff0000")
             .setThumbnail(toBan.user.displayAvatarURL({dynamic: true}))
-            .setFooter(message.member.displayName, message.author.displayAvatarURL)
+            .setFooter(toBan.user.tag, toBan.user.displayAvatarURL({dynamic: true}))
             .setTimestamp()
             .setDescription(stripIndents`**> Banned member:** ${toBan.user.username} (${toBan.user.id})
             **> Banned by:** ${message.member} (${message.member.id})
             **> Reason:** ${args.slice(1).join(" ")}`)
             .setAuthor(message.author.username , message.author.displayAvatarURL({dynamic: true}))
+
+
         const promptEmbed = new MessageEmbed()
             .setColor("GREEN")
             .setAuthor(`This verification becomes invalid after 30s.`)
@@ -86,8 +88,6 @@ if (toBan.hasPermission("KICK_MEMBERS")) {
             // Verification stuffs
             if (emoji === "✅") { 
                 msg.delete();
-
-                message.channel.send(embed)
 
                 toBan.ban(args.slice(1).join(" "))
                     .catch(err => {
