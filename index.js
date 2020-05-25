@@ -30,11 +30,7 @@ client.on("ready", () => {
     console.log(`${client.user.username} is ready!`) + client.user.setStatus("online"); 
   
     let statuses = [
-     `Game News`,
-     `BETA Construction`,
      `c!help`,
-     `c!ping`,
-     `Reports`,
      `${client.users.cache.size} users`,
      `${client.guilds.cache.size} servers`
     ];
