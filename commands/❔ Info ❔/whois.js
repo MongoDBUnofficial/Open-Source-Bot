@@ -35,7 +35,7 @@ module.exports = {
         .addField('Server', `\`\`\`${message.guild.name}\`\`\``)
         .addField('Nickname', `\`\`\`${member.nickname ? member.nickname : 'No Nickname'}\`\`\``)
         .addField('Status', `\`\`\`${status}\`\`\``)
-        .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
+        .addField('Created At', `\`\`\`${usercreated}\`\`\``, true)
         .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
         .setFooter(message.guild.name, message.guild.iconURL())
         .setThumbnail(whoismember.displayAvatarURL({dynamic: true}))
