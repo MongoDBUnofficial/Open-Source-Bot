@@ -25,7 +25,7 @@ return target;
     },
 
     formatDate: function(date) {
-return new Intl.DateTimeFormat('en-US').format(date);
+return new Intl.DateTimeFormat('en-GB').format(date);
     },
 
 promptMessage: async function(message, author, time, validReactions) {
