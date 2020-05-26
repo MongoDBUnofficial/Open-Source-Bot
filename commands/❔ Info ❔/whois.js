@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const { formatDate } = require("../../functions.js")
 
 module.exports = {
     name: "whois",
@@ -10,7 +11,11 @@ module.exports = {
 
         const roleColor = message.guild.me.displayHexColor;
         
+        
         const whoismember = message.mentions.users.first() || message.author;
+
+        const usercreated = formatDate(whoismember.user.createdAt)
+
         const member = message.guild.member(whoismember);
         let status = '';
         if (whoismember.presence.status === 'dnd'){
@@ -30,7 +35,7 @@ module.exports = {
         .addField('Server', `\`\`\`${message.guild.name}\`\`\``)
         .addField('Nickname', `\`\`\`${member.nickname ? member.nickname : 'No Nickname'}\`\`\``)
         .addField('Status', `\`\`\`${status}\`\`\``)
-        .addField('Created At', `\`\`\`${whoismember.createdAt.toLocaleDateString()}\`\`\``, true)
+        .addField('Created At', `\`\`\`${usercreated}\`\`\``, true)
         .addField('Joined At', `\`\`\`${member.joinedAt.toLocaleDateString()}\`\`\``, true)
         .setFooter(message.guild.name, message.guild.iconURL())
         .setThumbnail(whoismember.displayAvatarURL({dynamic: true}))
