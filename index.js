@@ -27,7 +27,7 @@ require(`./handler/${handler}`)(client);
 //Ready
 client.on("ready", () => {
 
-    console.log(`${client.user.username} is ready!`) + client.user.setStatus("online"); 
+    console.log(`${client.user.username} is ready!`) + client.user.setStatus("dnd"); 
   
     let statuses = [
      `c!help`,
@@ -45,7 +45,7 @@ client.on("ready", () => {
 client.on("message", async message => {
     
     
-    const prefix = "c!";
+    const prefix = "mb!";
 
     if(message.channel.type === "dm") return;
 
