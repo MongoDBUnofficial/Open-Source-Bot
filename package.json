@@ -20,7 +20,7 @@
     "mongoose": "^5.9.14",
     "random-puppy": "^1.1.0",
     "request": "^2.88.2",
-    "underscore": "^1.10.2",
+    "underscore": "^1.12.1",
     "util": "^0.12.2"
   }
 }
