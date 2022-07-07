@@ -15,7 +15,7 @@
     "curl": "^0.1.4",
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.9.14",
     "random-puppy": "^1.1.0",
